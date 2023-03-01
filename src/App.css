@@ -205,7 +205,7 @@ span {
   display: flex;
   flex-direction: row;
   height: 70vh;
-  width: 98%;
+  width: 100%;
   background-color: #ffffffab;
 }
 .landing-1 {
