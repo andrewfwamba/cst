@@ -17,20 +17,28 @@ const AppLayout = () => (
 
 const router = createBrowserRouter([
   {
+    path: "/",
     element: <AppLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: false, element: <Empty /> },
       {
-        path: "/",
         errorElement: <ErrorPage />,
-        element: <Home />,
-      },
-      {
-        path: "products",
-        element: <Products />,
+        children: [
+          { index: true, element: <Empty /> },
+          {
+            path: "home",
+            element: <Home />,
+          },
+          {
+            path: "products",
+            element: <Products />,
+          },
+        ],
       },
     ],
+  },
+  {
+    path: "login",
   },
 ]);
 
