@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="container">
-      <div className="landing-wrapper mt-2">
+      <div className="landing-wrapper mt-2 radius">
         <div className="landing-1">
           <h3>Get Clarity for Your Organization's Performance</h3>
           <p>
