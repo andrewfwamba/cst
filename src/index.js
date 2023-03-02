@@ -7,6 +7,7 @@ import Products from "./routes/Products";
 import "./App.css";
 import ErrorPage from "./routes/error-page";
 import Empty from "./routes/default";
+import Login from "./routes/Login";
 
 const AppLayout = () => (
   <>
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
   },
   {
     path: "login",
+    element: <Login />,
   },
 ]);
 
