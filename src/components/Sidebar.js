@@ -22,7 +22,10 @@ function Sidebar() {
             </Link>
           </div>
           <div className="btn-wrapper">
-            <Link className="btn radius mr-1 bds text-dark"> Sign In </Link>
+            <Link to="login" className="btn radius mr-1 bds text-dark">
+              {" "}
+              Sign In{" "}
+            </Link>
             <Link className="btn radius bg-secondary">Get started</Link>
           </div>
         </div>
