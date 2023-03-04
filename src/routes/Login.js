@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMsg, setErrorMsg] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [errorMsg, setErrorMsg] = useState({});
+  // const [isSubmitted, setIsSubmitted] = useState(false);
   const [emailError, setEmailError] = useState("");
 
   const validation = () => {
@@ -40,37 +40,43 @@ function Login() {
   return (
     <>
       <section>
-        <div class="form-box">
-          <div class="form-value">
+        <div className="form-box">
+          <div className="form-value">
             <form action="" onSubmit={handleSubmit}>
               <h2>Login</h2>
-              <div class="inputbox">
+              <div className="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => validateEmail(e.target.value)}
+                  id="email"
                 />
-                <label for="">Email</label>
+                <label htmlFor="email">Email</label>
               </div>
               {emailError !== "" && <p className="text-danger">{emailError}</p>}
-              <div class="inputbox">
+              <div className="inputbox">
                 <ion-icon name="lock-closed-outline"></ion-icon>
                 <input
+                  minimum={8}
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  id="password"
                 />
-                <label for="">Password</label>
+                <label htmlFor="password">Password</label>
               </div>
-              <div class="forget">
+              <div className="forget">
                 <label for="">
                   <input type="checkbox" />
-                  Remember Me <Link to="#">Forget Password</Link>
+                  Remember Me
                 </label>
               </div>
               <button type="submit">Log in</button>
-              <div class="register">
+              <div className="register">
+                <p>
+                  <Link to="#">Forgot Password</Link>
+                </p>
                 <p>
                   Don't have a account <Link href="#">Register</Link>
                 </p>
