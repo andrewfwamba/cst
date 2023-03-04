@@ -8,8 +8,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(true);
-      console.log("Hello, World!");
-    }, 3000);
+    }, 1500);
     setLoading(false);
     return () => clearTimeout(timer);
   }, []);
