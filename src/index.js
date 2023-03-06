@@ -1,37 +1,50 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Home from "./pages/Home";
-import Products from "./pages/Products";
-import './App.css';
-import ErrorPage from "./pages/error-page";
+import Home from "./routes/Home";
+import Products from "./routes/Products";
+import "./App.css";
+import ErrorPage from "./routes/error-page";
+import Empty from "./routes/default";
+import Login from "./routes/Login";
 
 const AppLayout = () => (
   <>
     <Sidebar />
-    <Outlet/>
+    <Outlet />
   </>
 );
 
 const router = createBrowserRouter([
   {
-    element: <AppLayout/>,
-    errorElement: <ErrorPage/>,
-    children:[
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <ErrorPage />,
+    children: [
       {
-        path: "/",
-        element: <Home />,
+        errorElement: <ErrorPage />,
+        children: [
+          { index: true, element: <Empty /> },
+          {
+            path: "home",
+            element: <Home />,
+          },
+          {
+            path: "products",
+            element: <Products />,
+          },
+        ],
       },
-      {
-        path: "products",
-        element: <Products />,
-      },
-    ]
+    ],
   },
-
+  {
+    path: "login",
+    element: <Login />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
 );

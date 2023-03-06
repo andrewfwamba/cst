@@ -13,9 +13,21 @@ function Sidebar() {
     <>
       <IconContext.Provider value={{ color: "undefined" }}>
         <div className="navbar">
-          <Link to="#" className="menu-bars">
-            <FaIcons.FaBars onClick={showSidebar} />
-          </Link>
+          <div className="navcenter">
+            <Link to="#" className="menu-bars">
+              <FaIcons.FaBars onClick={showSidebar} />
+            </Link>
+            <Link to="#" className="logo">
+              Crewsoft&trade;
+            </Link>
+          </div>
+          <div className="btn-wrapper">
+            <Link to="login" className="btn radius mr-1 bds text-dark">
+              {" "}
+              Sign In{" "}
+            </Link>
+            <Link className="btn radius bg-secondary">Get started</Link>
+          </div>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu "}>
           <ul className="nav-menu-items" onClick={showSidebar}>
