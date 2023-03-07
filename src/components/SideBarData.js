@@ -40,4 +40,10 @@ export const SideBarData = [
     icons: <IoIcons.IoMdHelpCircle />,
     cName: "nav-text",
   },
+  {
+    title: "About Us",
+    path: "/about",
+    icons: <FaIcons.FaInfo />,
+    cName: "nav-text",
+  },
 ];
