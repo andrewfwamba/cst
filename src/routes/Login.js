@@ -7,6 +7,7 @@ function Login() {
   // const [errorMsg, setErrorMsg] = useState({});
   // const [isSubmitted, setIsSubmitted] = useState(false);
   const [emailError, setEmailError] = useState("");
+  const [passError, setPassError] = useState("");
 
   const validation = () => {
     let RegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -21,9 +22,21 @@ function Login() {
       return true;
     } else {
       setEmail(email);
-      console.log("an error");
-
       setEmailError("Please enter a valid email address.");
+
+      return false;
+    }
+  };
+
+  const validatePassword = (password) => {
+    if (password.length >= 8) {
+      setPassword(password);
+      setPassError("");
+      return true;
+    } else {
+      setPassword(password);
+
+      setPassError("Password should be atleast 8 chharacters.");
 
       return false;
     }
@@ -61,11 +74,14 @@ function Login() {
                   minimum={8}
                   type="password"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => validatePassword(e.target.value)}
                   id="password"
                 />
                 <label htmlFor="password">Password</label>
               </div>
+              {passError !== "" && (
+                <p className="text-danger mb-2">{passError}</p>
+              )}
               <div className="forget">
                 <label for="">
                   <input type="checkbox" />
