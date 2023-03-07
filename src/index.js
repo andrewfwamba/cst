@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./routes/Home";
 import Products from "./routes/Products";
 import "./App.css";
+import "./Utils.css";
 import ErrorPage from "./routes/error-page";
 import Empty from "./routes/default";
 import Login from "./routes/Login";
