@@ -29,11 +29,20 @@ function Sidebar() {
             <Link className="btn radius bg-secondary">Get started</Link>
           </div>
         </div>
-        <nav className={sidebar ? "nav-menu active" : "nav-menu "}>
+        <nav
+          className={
+            sidebar
+              ? "nav-menu active .box-shadow-left"
+              : "nav-menu .box-shadow-left"
+          }
+        >
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
               <Link to="#" className="menu-bars">
                 <AiIcons.AiOutlineClose />
+              </Link>
+              <Link to="#" className="logo">
+                Crewsoft&trade;
               </Link>
             </li>
             {SideBarData.map((item, index) => {
