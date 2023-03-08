@@ -18,7 +18,7 @@ function Home() {
   } else
     return (
       <div className="container">
-        <div className="landing-wrapper mt-2 radius">
+        <div className="landing-wrapper mt-2 radius mb-2">
           <div className="landing-1">
             <h3>Get Clarity for Your Organization's Performance</h3>
             <p>
@@ -32,6 +32,8 @@ function Home() {
           </div>
           <div className="landing-2"></div>
         </div>
+        <hr />
+        <div className="info"></div>
       </div>
     );
 }
