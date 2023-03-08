@@ -33,6 +33,9 @@
 .text-dark {
   color: #000;
 }
+.text-sm {
+  font-size: 1rem;
+}
 
 .center {
   align-self: center;
@@ -42,7 +45,7 @@
   border-radius: 5px;
 }
 .bg-secondary {
-  background-color: #760cf5;
+  background-color: #fe9e0d;
 }
 .text-danger {
   color: red;
@@ -52,4 +55,43 @@
   border-style: solid;
   border-width: 1px;
   border-color: #000;
+}
+/* anime */
+.anime svg {
+  font: bold 1rem;
+  width: 100%;
+  height: 100px;
+}
+
+.show-case {
+  fill: none;
+  stroke: black;
+  stroke-width: 0.1px;
+  /* stroke-linejoin: round; */
+  animation: 2s pulsate infinite;
+}
+
+@keyframes pulsate {
+  50% {
+    stroke-width: 1px;
+  }
+}
+
+.border-shadow-left {
+  border-left: 1px solid #c1c1c1;
+  background: linear-gradient(to-left, #eee 0%, #fff 10%);
+  background: -ms-linear-gradient(left, #eee 0%, #fff 10%);
+  background: -moz-linear-gradient(left, #eee 0%, #fff 10%);
+  background: -webkit-linear-gradient(left, #eee 0%, #fff 10%);
+  box-shadow: -44px 120px 80px -72px #fff inset,
+    -44px -120px 80px -72px #fff inset;
+  min-height: 400px;
+}
+.box-shadow-left {
+  box-shadow: 10px 10px 10px 7px #000000ab;
+}
+.info {
+  background-color: #fe9e0d;
+  width: 100%;
+  height: 200px;
 }
