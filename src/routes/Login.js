@@ -1,5 +1,7 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { loginUser } from "../utilities/client";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -42,11 +44,22 @@ function Login() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     // Prevent page reload
     event.preventDefault();
-    if (validation) {
-      console.log(email);
+    if (validation()) {
+      try {
+        const res = await axios.post(loginUser, {
+          email,
+          password,
+        });
+        console.log(res.data);
+        if (res.data.success) {
+          // handle successfull login
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -55,7 +68,7 @@ function Login() {
       <section>
         <div className="form-box">
           <div className="form-value">
-            <form action="" onSubmit={handleSubmit}>
+            <form method="post">
               <h2>Login</h2>
               <div className="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
@@ -88,7 +101,9 @@ function Login() {
                   Remember Me
                 </label>
               </div>
-              <button type="submit">Log in</button>
+              <button type="submit" onClick={handleSubmit}>
+                Log in
+              </button>
               <div className="register">
                 <p>
                   <Link to="#">Forgot Password</Link>
