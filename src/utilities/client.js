@@ -1,6 +1,6 @@
 // calls to api
 
-const baseUrl = "https://83e4-41-90-71-43.in.ngrok.io/api/v1";
+const baseUrl = "https://6fbb-41-90-71-43.in.ngrok.io/api/v1";
 
 export const createUser = `${baseUrl}/create-user`;
 export const updateUser = `${baseUrl}/users/update`;
