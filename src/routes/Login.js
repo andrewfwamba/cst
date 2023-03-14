@@ -43,12 +43,20 @@ function Login() {
       return false;
     }
   };
+  const check = async () => {
+    console.log("running");
+    const resp = await axios.get("http://192.168.1.108:8000");
+    console.log(resp.data);
+  };
 
   const handleSubmit = async (event) => {
-    // Prevent page reload
     event.preventDefault();
+
+    // Prevent page reload
+
     if (validation()) {
       try {
+        console.log("running");
         const res = await axios.post(loginUser, {
           email,
           password,
@@ -114,16 +122,11 @@ function Login() {
               </div>
             </form>
           </div>
+          <p className="btn" onClick={() => check()}>
+            check
+          </p>
         </div>
       </section>
-      <script
-        type="module"
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-      ></script>
-      <script
-        nomodule
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-      ></script>
     </>
   );
 }
