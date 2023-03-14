@@ -9,6 +9,7 @@ import "./Utils.css";
 import ErrorPage from "./routes/error-page";
 import Empty from "./routes/default";
 import Login from "./routes/Login";
+import Stats from "./routes/Stats";
 
 const AppLayout = () => (
   <>
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
           {
             path: "home",
             element: <Home />,
+          },
+          {
+            path: "statistics",
+            element: <Stats />,
           },
           {
             path: "products",
