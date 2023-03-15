@@ -73,9 +73,9 @@ function Login() {
 
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-      <div className="mt-8 mb-6 w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl shadow-rose-600/40 ring ring-1 ring-amber-600">
-        <h1 className="text-3xl font-light text-center text-amber-700 ">
-          Register
+      <div className="mt-8 mb-6 w-8/12 p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl shadow-rose-600/40 ring ring-1 ring-amber-600">
+        <h1 className="text-xl font-light text-center text-amber-700 ">
+          Login
         </h1>
         <form className="mt-6">
           <div className="mb-2">
