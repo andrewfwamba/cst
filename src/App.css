@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @import url("https://fonts.googleapis.com/css2?family=Arimo&family=Lato:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;1,300&family=Raleway+Dots&family=Raleway:wght@100;200;300&display=swap");
 
 * {
@@ -58,14 +57,12 @@ a {
   margin-left: 1rem;
   font-size: 1.5rem;
   background: none;
-  color: #000;
 }
 .logo {
   margin-left: 1rem;
   font-size: 1.5rem;
   margin-bottom: 3px;
   background: none;
-  color: #000;
 }
 
 .nav-menu {
