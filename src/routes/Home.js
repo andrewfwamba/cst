@@ -17,8 +17,20 @@ function Home() {
     return <Loader />;
   } else
     return (
-      <div className="container">
-        <div className="landing-wrapper mt-2 radius">
+      <div className="mx-auto content-center">
+        <header className="bg-white shadow">
+          <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              Dashboard
+            </h1>
+          </div>
+        </header>
+        <main>
+          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+            {/* Your content */}
+          </div>
+        </main>
+        <div className="landing-wrapper mt-2 radius mb-2 md:max-w-max">
           <div className="landing-1">
             <h3>Get Clarity for Your Organization's Performance</h3>
             <p>
@@ -32,6 +44,8 @@ function Home() {
           </div>
           <div className="landing-2"></div>
         </div>
+        <hr />
+        <div className="info"></div>
       </div>
     );
 }
