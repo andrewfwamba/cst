@@ -5,9 +5,13 @@ import Sidebar from "./components/Sidebar";
 import Home from "./routes/Home";
 import Products from "./routes/Products";
 import "./App.css";
+import "./Utils.css";
 import ErrorPage from "./routes/error-page";
 import Empty from "./routes/default";
 import Login from "./routes/Login";
+import Stats from "./routes/Stats";
+import Signup from "./routes/Signup";
+import Support from "./routes/Support";
 
 const AppLayout = () => (
   <>
@@ -31,6 +35,10 @@ const router = createBrowserRouter([
             element: <Home />,
           },
           {
+            path: "statistics",
+            element: <Stats />,
+          },
+          {
             path: "products",
             element: <Products />,
           },
@@ -41,6 +49,16 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "signup",
+    element: <Signup />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "support",
+    element: <Support />,
     errorElement: <ErrorPage />,
   },
 ]);
