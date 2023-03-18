@@ -203,7 +203,7 @@ span {
 
 /* form styling */
 
-section {
+.section1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,7 +325,7 @@ button {
 }
 
 /* media queries for smaller screens */
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   .logo {
     display: inline-block;
   }
