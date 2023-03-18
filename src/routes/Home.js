@@ -26,11 +26,26 @@ function Home() {
           </div>
         </header>
         <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-7xl py-6 sm:px-6 lg:px-8">
             {/* Your content */}
+            <div className="landing-wrapper mt-2 grid-cols-1 radius mb-2 md:max-w-max">
+              <div className="landing-1">
+                <h3>Get Clarity for Your Organization's Performance</h3>
+                <p>
+                  As business directives they know how to dice and slice
+                  financial information to get to the detail examine the
+                  varieties, the exceptions and then follow these numbers back
+                  up the line
+                </p>
+                <Link to="#" className="btn radius center mt-2 bg-secondary">
+                  Get Started
+                </Link>
+              </div>
+              <div className="landing-2 grid-cols-1"></div>
+            </div>
           </div>
         </main>
-        <div className="landing-wrapper mt-2 radius mb-2 md:max-w-max">
+        {/* <div className="landing-wrapper mt-2 radius mb-2 md:max-w-max">
           <div className="landing-1">
             <h3>Get Clarity for Your Organization's Performance</h3>
             <p>
@@ -43,8 +58,7 @@ function Home() {
             </Link>
           </div>
           <div className="landing-2"></div>
-        </div>
-        <hr />
+        </div> */}
         <div className="info"></div>
       </div>
     );

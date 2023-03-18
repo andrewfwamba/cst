@@ -1,11 +1,8 @@
 import React from "react";
+import Category from "../components/Category";
 
 function Products() {
-  return (
-    <div className="products">
-      <p>Products</p>
-    </div>
-  );
+  return <Category />;
 }
 
 export default Products;
