@@ -1,15 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-};
 const navigation = [
   { name: "Dashboard", href: "/home", current: true },
   { name: "Team", href: "/team", current: false },
@@ -29,6 +23,16 @@ function classNames(...classes) {
 }
 
 function Nav({ showSidebar }) {
+  const [userinfo, setUserinfo] = useState([]);
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("user"));
+    setUserinfo(data);
+  }, []);
+  const user = {
+    name: `${userinfo.firstName}  ${userinfo.lastName}`,
+    email: userinfo.email,
+    imageUrl: userinfo.image,
+  };
   return (
     <>
       <div className="min-h-full">
