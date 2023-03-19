@@ -60,11 +60,6 @@ const router = createBrowserRouter([
     element: <Signup />,
     errorElement: <ErrorPage />,
   },
-  {
-    path: "support",
-    element: <Support />,
-    errorElement: <ErrorPage />,
-  },
 ]);
 
 createRoot(document.getElementById("root")).render(
