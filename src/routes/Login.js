@@ -16,23 +16,8 @@ function Login() {
   }
 
   const validation = () => {
-    // let RegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     return (username.length >= 3) & (password.length > 6);
   };
-
-  // const validateEmail = (email) => {
-  //   const reg = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-  //   if (reg.test(email)) {
-  //     setEmail(email);
-  //     setEmailError("");
-  //     return true;
-  //   } else {
-  //     setEmail(email);
-  //     setEmailError("Please enter a valid email address.");
-
-  //     return false;
-  //   }
-  // };
 
   const validatePassword = (password) => {
     if (password.length >= 8) {
@@ -51,7 +36,7 @@ function Login() {
   const handleSubmit = async (event) => {
     // Prevent page reload
     event.preventDefault();
-    // start validation
+    // start login logic
     if (validation()) {
       setLoading(true);
       try {
@@ -66,7 +51,7 @@ function Login() {
           // handle successful login
           localStorage.setItem("user", JSON.stringify(res.data));
           setLoading(false);
-          console.log("successfull login");
+          console.log("successful login");
           navigate("/home");
         }
       } catch (error) {
@@ -81,7 +66,7 @@ function Login() {
   } else {
     return (
       <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-        <div className="mt-8 mb-6 w-8/12 p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl shadow-rose-600/40 ring ring-1 ring-amber-600">
+        <div className="mt-8 mb-6 w-8/12 p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl shadow-rose-600/40 ring-1 ring-amber-600">
           <h1 className="text-xl font-light text-center text-amber-700 ">
             Login
           </h1>
@@ -121,7 +106,7 @@ function Login() {
                 className={classNames(
                   validation()
                     ? "w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-amber-600 rounded-md hover:bg-amber-700 focus:outline-none focus:bg-amber-700"
-                    : "bg-amber-400 rounded-md text-white cursor-not-allowed transition-colors duration-200"
+                    : "disabled:opacity-50 rounded-md text-white cursor-not-allowed transition-colors duration-200"
                 )}
                 onClick={handleSubmit}
                 disabled={!validation()}
