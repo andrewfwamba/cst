@@ -40,7 +40,6 @@ function Login() {
     if (validation()) {
       setLoading(true);
       try {
-        console.log("running");
         // sign in with fake api from dummyjson.com/auth/login
         const res = await axios.post(loginUser, {
           username: username,
