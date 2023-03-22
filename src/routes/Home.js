@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
+import Footer from "../components/Footer";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -60,6 +61,7 @@ function Home() {
           <div className="landing-2"></div>
         </div> */}
         <div className="info"></div>
+        <Footer />
       </div>
     );
 }

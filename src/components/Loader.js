@@ -8,7 +8,7 @@ const override = {
 
 function Loader(loading) {
   return (
-    <div className="loader ">
+    <div className="loader mx-auto my-auto">
       {/* <input
         value={color}
         onChange={(input) => setColor(input.target.value)}
