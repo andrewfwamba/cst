@@ -19,17 +19,13 @@ function Home() {
   } else
     return (
       <div className="mx-auto content-center">
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-              Dashboard
-            </h1>
-          </div>
+        <header className="bg-white h-3 shadow">
+          <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8"></div>
         </header>
         <main>
-          <div className="mx-auto grid max-w-7xl py-6 sm:px-6 lg:px-8">
+          <div className="mx-auto grid sm:max-w-[100%] max-w-[100%] py-6 sm:px-6 lg:px-8">
             {/* Your content */}
-            <div className="landing-wrapper mt-2 grid-cols-1 radius mb-2 md:max-w-max">
+            <div className="landing-wrapper max-w-[1240px] mx-auto py-6 px-8 grid lg:grid-cols-3 gap-8 text-gray-600">
               <div className="landing-1">
                 <h3>Get Clarity for Your Organization's Performance</h3>
                 <p>
@@ -42,7 +38,7 @@ function Home() {
                   Get Started
                 </Link>
               </div>
-              <div className="landing-2 grid-cols-1"></div>
+              <div className="landing-2 lg:col-span-2 mt-6"></div>
             </div>
           </div>
         </main>
