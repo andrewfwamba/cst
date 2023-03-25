@@ -74,7 +74,7 @@ function Nav({ showSidebar }) {
                     <div className="ml-4 flex items-center md:ml-6">
                       <button
                         type="button"
-                        className="p-1 relative inline-flex items-center justify-center w-7 h-7 overflow-hidden rounded-full dark:bg-gray-800 hover:text-white text-gray-400 focus:outline-none focus:ring-white focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800"
+                        className="p-1 relative inline-flex items-center justify-center w-6 h-6 overflow-hidden rounded-full dark:bg-gray-800 hover:text-white text-gray-400 focus:outline-none focus:ring-white focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800"
                       >
                         <span className="sr-only">View notifications</span>
                         <BellIcon className="h-6 w-6" aria-hidden="true" />
