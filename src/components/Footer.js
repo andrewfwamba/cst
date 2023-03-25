@@ -31,39 +31,47 @@ const Footer = () => {
         </div>
         <div className="lg:col-span-2 flex justify-between mt-6">
           <div>
-            <h6 className="font-medium text-gray-600">Solutions</h6>
+            <h6 className="font-bold text-xs lg:text-lg text-gray-600">
+              Solutions
+            </h6>
             <ul>
-              <li className="py-2 text-sm">Analytics</li>
-              <li className="py-2 text-sm">Marketing</li>
-              <li className="py-2 text-sm">Commerce</li>
-              <li className="py-2 text-sm">Insights</li>
+              <li className="py-1 text-xs lg:text-sm">Analytics</li>
+              <li className="py-1 text-xs lg:text-sm">Marketing</li>
+              <li className="py-1 text-xs lg:text-sm">Commerce</li>
+              <li className="py-1 text-xs lg:text-sm">Insights</li>
             </ul>
           </div>
           <div>
-            <h6 className="font-medium text-gray-600">Support</h6>
+            <h6 className="font-bold text-xs lg:text-lg text-gray-600">
+              Support
+            </h6>
             <ul>
-              <li className="py-2 text-sm">Pricing</li>
-              <li className="py-2 text-sm">Documentation</li>
-              <li className="py-2 text-sm">Guides</li>
-              <li className="py-2 text-sm">API Status</li>
+              <li className="py-1 text-xs lg:text-sm">Pricing</li>
+              <li className="py-1 text-xs lg:text-sm">Docs</li>
+              <li className="py-1 text-xs lg:text-sm">Guides</li>
+              <li className="py-1 text-xs lg:text-sm">APIs</li>
             </ul>
           </div>
           <div>
-            <h6 className="font-medium text-gray-600">Company</h6>
+            <h6 className="font-bold text-xs lg:text-lg text-gray-600">
+              Company
+            </h6>
             <ul>
-              <li className="py-2 text-sm">About</li>
-              <li className="py-2 text-sm">Blog</li>
-              <li className="py-2 text-sm">Jobs</li>
-              <li className="py-2 text-sm">Press</li>
-              <li className="py-2 text-sm">Careers</li>
+              <li className="py-1 text-xs lg:text-sm">About</li>
+              <li className="py-1 text-xs lg:text-sm">Blog</li>
+              <li className="py-1 text-xs lg:text-sm">Jobs</li>
+              <li className="py-1 text-xs lg:text-sm">Press</li>
+              <li className="py-1 text-xs lg:text-sm">Careers</li>
             </ul>
           </div>
           <div>
-            <h6 className="font-medium text-gray-600">Legal</h6>
+            <h6 className="font-bold text-xs lg:text-lg text-gray-600">
+              Legal
+            </h6>
             <ul>
-              <li className="py-2 text-sm">Claim</li>
-              <li className="py-2 text-sm">Policy</li>
-              <li className="py-2 text-sm">Terms</li>
+              <li className="py-1 text-xs lg:text-sm">Claim</li>
+              <li className="py-1 text-xs lg:text-sm">Policy</li>
+              <li className="py-1 text-xs lg:text-sm">Terms</li>
             </ul>
           </div>
         </div>
@@ -71,7 +79,7 @@ const Footer = () => {
       <div className="w-full py-4 mb-10 px-10 text-gray-600 bg-slate-300 justify-center justify-items-center">
         {" "}
         <p className="self-center">
-          Crewsoft technologies &copy; 2019 - {new Date().getFullYear()}
+          Crewsoft technologies &copy;{new Date().getFullYear()}
         </p>
       </div>
     </>
