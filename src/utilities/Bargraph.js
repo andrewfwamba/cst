@@ -21,18 +21,18 @@ Chart.register(
 function Bargraph() {
   const data = {
     labels: [
-      "January",
-      "February",
+      "Jan",
+      "Feb",
       "March",
       "April",
       "May",
       "June",
       "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
+      "Aug",
+      "Sept",
+      "Oct",
+      "Nov",
+      "Dec",
     ],
     datasets: [
       {
@@ -49,8 +49,8 @@ function Bargraph() {
   return (
     <Bar
       data={data}
-      width={700}
-      height={400}
+      width={400}
+      height={200}
       option={{
         maintainAspectRatio: false,
       }}
