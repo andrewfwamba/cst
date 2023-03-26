@@ -76,11 +76,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full py-4 mb-10 px-10 text-gray-600 bg-slate-300 justify-center justify-items-center">
+      <div className="w-full py-4 mb-10 px-10 text-gray-600 bg-slate-300 text-center">
         {" "}
-        <p className="self-center">
-          Crewsoft technologies &copy;{new Date().getFullYear()}
-        </p>
+        <p>Crewsoft technologies &copy;{new Date().getFullYear()}</p>
       </div>
     </>
   );
