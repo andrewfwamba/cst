@@ -177,19 +177,15 @@ span {
   flex-wrap: wrap;
   height: inherit;
   width: 45%;
-  padding: 30px;
+  padding: 10px;
 }
 .landing-1 h3 {
-  color: black;
   font-weight: bold;
-  font-size: 50px;
+  /* font-size: 50px; */
+  line-height: 1;
 }
 .landing-1 p {
-  color: #000;
-  font-family: "Poppins", sans-serif;
   line-height: 1.5;
-  font-size: 15px;
-  font-weight: bold;
 }
 .landing-2 {
   background: url("../public/landing.jpg") no-repeat;
@@ -323,9 +319,12 @@ button {
 .register p a:hover {
   text-decoration: underline;
 }
+.pad-r {
+  padding-right: 6.5rem;
+}
 
 /* media queries for smaller screens */
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .logo {
     display: inline-block;
   }
@@ -339,9 +338,7 @@ button {
     padding: 10px;
   }
   .landing-1 h3 {
-    color: black;
-    font-weight: bold;
-    font-size: 35px;
+    font-size: 28px;
     text-align: center;
   }
   .landing-1 p {
