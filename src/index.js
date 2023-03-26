@@ -69,22 +69,15 @@ const router = createBrowserRouter(
   // },
   // ]
   createRoutesFromElements(
-    <>
-      <Route path="/" element={<AppLayout />} errorElement={<ErrorPage />}>
-        <Route errorElement={<ErrorPage />}>
-          <Route index element={<Home />} />
-          <Route path="statistics" element={<Stats />} />
-          <Route path="products" element={<Products />} />
-          <Route path="support" element={<Support />} />
-
-          <Route />
-        </Route>
+    <Route path="/" element={<AppLayout />} errorElement={<ErrorPage />}>
+      <Route errorElement={<ErrorPage />}>
+        <Route index element={<Home />} />
+        <Route path="statistics" element={<Stats />} />
+        <Route path="products" element={<Products />} />
+        <Route path="support" element={<Support />} />
+        <Route />
       </Route>
-      <Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Route>
-    </>
+    </Route>
   )
 );
 
