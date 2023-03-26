@@ -7,16 +7,15 @@ import Footer from "../components/Footer";
 function Support() {
   return (
     <>
-      <div className="relative isolate overflow-hidden mt-5 bg-gray-900 py-2 sm:py-4 lg:py-8">
+      <div className="relative isolate overflow-hidden mt-1 bg-gray-900 py-2 sm:py-4 lg:py-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl lg:max-w-lg">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Subscribe to our newsletter.
+                Get New Insights Weekly
               </h2>
               <p className="mt-4 text-lg leading-8 text-gray-300">
-                Nostrud amet eu ullamco nisi aute in ad minim nostrud
-                adipisicing velit quis. Duis tempor incididunt dolore.
+                Subscribe to our newsletter. Enter your email
               </p>
               <div className="mt-6 flex flex-col space-y-6 max-w-md gap-x-4">
                 <label htmlFor="email-address" className="sr-only">
