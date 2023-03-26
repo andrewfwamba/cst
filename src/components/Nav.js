@@ -5,18 +5,18 @@ import { Fragment } from "react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Dashboard", href: "/home", current: true },
+  { name: "Dashboard", href: "/", current: true },
   { name: "Team", href: "/team", current: false },
   { name: "Projects", href: "/products", current: true },
   { name: "Statistics", href: "/statistics", current: false },
   { name: "Support", href: "/support", current: false },
   { name: "About", href: "/about", current: false },
 ];
-const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
-];
+// const userNavigation = [
+//   { name: "Your Profile", href: "#" },
+//   { name: "Settings", href: "#" },
+//   { name: "Sign out", href: "#" },
+// ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -24,15 +24,15 @@ function classNames(...classes) {
 
 function Nav({ showSidebar }) {
   const [userinfo, setUserinfo] = useState([]);
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("user"));
-    setUserinfo(data);
-  }, []);
-  const user = {
-    name: `${userinfo.firstName}  ${userinfo.lastName}`,
-    email: userinfo.email,
-    imageUrl: userinfo.image,
-  };
+  // useEffect(() => {
+  //   const data = JSON.parse(localStorage.getItem("user"));
+  //   setUserinfo(data);
+  // }, []);
+  // const user = {
+  //   name: `${userinfo.firstName}  ${userinfo.lastName}`,
+  //   email: userinfo.email,
+  //   imageUrl: userinfo.image,
+  // };
   return (
     <>
       <div className="min-h-full">
@@ -40,13 +40,16 @@ function Nav({ showSidebar }) {
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-between">
+                <div className="flex h-11 sm:h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex items-center">
                       {/* <Link to="#" className="menu-bars text-white">
                         <FaIcons.FaBars onClick={showSidebar} />
                       </Link> */}
-                      <Link to="#" className="logo text-white">
+                      <Link
+                        to="#"
+                        className="logo text-sm sm:text-lg text-white"
+                      >
                         Crewsoft&trade;
                       </Link>
                     </div>
@@ -72,16 +75,16 @@ function Nav({ showSidebar }) {
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
-                      <button
+                      {/* <button
                         type="button"
                         className="p-1 relative inline-flex items-center justify-center w-6 h-6 overflow-hidden rounded-full dark:bg-gray-800 hover:text-white text-gray-400 focus:outline-none focus:ring-white focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-800"
                       >
                         <span className="sr-only">View notifications</span>
                         <BellIcon className="h-6 w-6" aria-hidden="true" />
-                      </button>
+                      </button> */}
 
                       {/* Profile dropdown */}
-                      <Menu as="div" className="relative ml-3">
+                      {/* <Menu as="div" className="relative ml-3">
                         <div>
                           <Menu.Button className="flex max-w-xs h-8 w-8 items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 focus:ring-offset-gray-800">
                             <span className="sr-only">Open user menu</span>
@@ -101,7 +104,7 @@ function Nav({ showSidebar }) {
                           leaveFrom="transform opacity-100 scale-100"
                           leaveTo="transform opacity-0 scale-95"
                         >
-                          <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          {/* <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
@@ -117,9 +120,9 @@ function Nav({ showSidebar }) {
                                 )}
                               </Menu.Item>
                             ))}
-                          </Menu.Items>
-                        </Transition>
-                      </Menu>
+                          </Menu.Items> */}
+                      {/* </Transition> */}
+                      {/* </Menu> */}
                     </div>
                   </div>
                   <div className="-mr-2 flex md:hidden">
@@ -153,7 +156,7 @@ function Nav({ showSidebar }) {
                         item.current
                           ? "bg-gray-900 text-white"
                           : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "block rounded-md px-3 py-2 text-base font-medium"
+                        "block rounded-md px-3 py-2 text-xs sm:text-base font-medium"
                       )}
                       aria-current={item.current ? "page" : undefined}
                     >
@@ -161,7 +164,7 @@ function Nav({ showSidebar }) {
                     </Disclosure.Button>
                   ))}
                 </div>
-                <div className="border-t border-gray-700 pt-4 pb-3">
+                {/* <div className="border-t border-gray-700 pt-4 pb-3">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
                       <img
@@ -198,7 +201,7 @@ function Nav({ showSidebar }) {
                       </Disclosure.Button>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </Disclosure.Panel>
             </>
           )}
