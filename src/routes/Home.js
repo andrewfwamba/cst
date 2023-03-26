@@ -18,45 +18,48 @@ function Home() {
     return <Loader />;
   } else
     return (
-      <div className="mx-auto content-center">
-        <header className="bg-white h-3 shadow">
-          <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8"></div>
-        </header>
+      <div className="mx-auto flex flex-col content-center">
         <main>
-          <div className="mx-auto grid sm:max-w-[100%] max-w-[100%] py-6 sm:px-6 lg:px-8">
+          <div className="mx-auto grid sm:max-w-[100%] w-full py-0">
             {/* Your content */}
-            <div className="landing-wrapper max-w-[1240px] mx-auto py-6 px-8 grid lg:grid-cols-3 gap-8 text-gray-600">
-              <div className="landing-1">
-                <h3>Get Clarity for Your Organization's Performance</h3>
-                <p>
-                  As business directives they know how to dice and slice
-                  financial information to get to the detail examine the
-                  varieties, the exceptions and then follow these numbers back
-                  up the line
+            <div className="landing-wrapper bg-gradient-to-r from-gray-200 to-amber-500 mx-auto py-6 grid lg:grid-cols-3 gap-8 text-gray-600">
+              <div className="landing-1 ">
+                <h3 className="text-lg sm:text-5xl text-center px-2 text-gray-700 pb-6">
+                  Award Winning Software Development Company
+                </h3>
+                <p className="text-gray-600 px-6 text-center">
+                  We are a team of software engineers, user experience
+                  designers, web content creators, and curators, and our goal is
+                  to help you begin your journey from where you are to accepting
+                  and seizing your potential in the digital space.
                 </p>
-                <Link to="#" className="btn radius center mt-2 bg-secondary">
-                  Get Started
-                </Link>
+                <p className="text-gray-600 text-xl mt-4 font-bold px-6 text-center">
+                  Comprehensive innovation advice and technical services that
+                  are tailored to meet your individual needs.
+                </p>
+
+                <div className="flex flex-row w-full relative">
+                  <input
+                    class="shadow text-sm pad-r appearance-none border h-10 sm:h-12 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none mt-5 focus:shadow-outline"
+                    id="username"
+                    type="email"
+                    placeholder="Enter your email"
+                  />
+                  <div className="mt-7 absolute top-0 sm:top-1 right-0.5 sm:right-1">
+                    <Link
+                      to="#"
+                      className="py-2 ml-2 px-2 text-xs sm:text-sm font-normal text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      Get a demo
+                    </Link>
+                  </div>
+                </div>
               </div>
               <div className="landing-2 lg:col-span-2 mt-6"></div>
             </div>
           </div>
         </main>
-        {/* <div className="landing-wrapper mt-2 radius mb-2 md:max-w-max">
-          <div className="landing-1">
-            <h3>Get Clarity for Your Organization's Performance</h3>
-            <p>
-              As business directives they know how to dice and slice financial
-              information to get to the detail examine the varieties, the
-              exceptions and then follow these numbers back up the line
-            </p>
-            <Link to="#" className="btn radius center mt-2 bg-secondary">
-              Get Started
-            </Link>
-          </div>
-          <div className="landing-2"></div>
-        </div> */}
-        <div className="info"></div>
+        <div className="h-10 bg-gray-500 py-20"></div>
         <Footer />
       </div>
     );
