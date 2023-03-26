@@ -78,7 +78,10 @@ const Footer = () => {
       </div>
       <div className="w-full py-4 mb-10 px-10 text-gray-600 bg-slate-300 text-center">
         {" "}
-        <p>Crewsoft technologies &copy;{new Date().getFullYear()}</p>
+        <p>
+          Copyright &copy;{new Date().getFullYear()} Crewsoft Technologies. All
+          rights reserved
+        </p>
       </div>
     </>
   );

@@ -22,7 +22,7 @@ function Home() {
         <main>
           <div className="mx-auto grid sm:max-w-[100%] w-full py-0">
             {/* Your content */}
-            <div className="landing-wrapper bg-gradient-to-r from-gray-200 to-amber-500 mx-auto py-6 grid lg:grid-cols-3 gap-8 text-gray-600">
+            <div className="landing-wrapper bg-gradient-to-r from-gray-200 to-amber-300 mx-auto py-6 grid lg:grid-cols-3 gap-8 text-gray-600">
               <div className="landing-1 ">
                 <h3 className="text-lg sm:text-5xl text-center px-2 text-gray-700 pb-6">
                   Award Winning Software Development Company
