@@ -188,7 +188,8 @@ span {
   line-height: 1.5;
 }
 .landing-2 {
-  background: url("../public/landing.jpg") no-repeat;
+  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")
+    no-repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -342,8 +343,6 @@ button {
     text-align: center;
   }
   .landing-1 p {
-    line-height: 1.5;
-    font-size: 12px;
     font-weight: bold;
   }
   .landing-2 {
