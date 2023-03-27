@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 function Support() {
   return (
     <>
-      <div className="relative isolate overflow-hidden mt-1 bg-gray-900 py-2 sm:py-4 lg:py-8">
+      <div className="animate__animated animate__backInUp relative isolate overflow-hidden mt-1 bg-gray-900 py-2 sm:py-4 lg:py-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl lg:max-w-lg">
