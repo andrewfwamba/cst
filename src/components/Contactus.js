@@ -2,10 +2,27 @@ import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+const alert = () => {
+  Swal.fire({
+    title: "Great. We will reach back to you soon.",
+    showClass: {
+      popup: "animate__animated animate__fadeInDown",
+    },
+    hideClass: {
+      popup: "animate__animated animate__fadeOutUp",
+    },
+    timer: 2000,
+  });
+};
+const onSubmit = (e) => {
+  e.preventDefault();
+  alert();
+};
 
 export default function Contactus() {
   const [agreed, setAgreed] = useState(false);
@@ -20,7 +37,7 @@ export default function Contactus() {
           Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-6 max-w-xl sm:mt-5">
+      <form onSubmit={onSubmit} className="mx-auto mt-6 max-w-xl sm:mt-5">
         <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
           <div>
             <label
