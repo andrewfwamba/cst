@@ -6,11 +6,10 @@ import Cards from "../components/Cards";
 
 function Home() {
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(true);
-    }, 1500);
+    }, 900);
     setLoading(false);
     return () => clearTimeout(timer);
   }, []);
@@ -23,8 +22,8 @@ function Home() {
         <div className="mx-auto flex flex-col content-center">
           <main>
             <div className="mx-auto grid sm:max-w-[100%] w-full py-0">
-              <div className="animate__animated animate__bounceInRight landing-wrapper mx-auto grid lg:grid-cols-3 gap-8 text-gray-600">
-                <div className="landing-1 bg-gradient-to-r from-blue-200/50 to-white/50">
+              <div className="landing-wrapper mx-auto grid lg:grid-cols-3 gap-8 text-gray-600">
+                <div className="animate__animated animate__fadeInLeft landing-1 sm:bg-gradient-to-r bg-gradient-to-b from-blue-200/50 to-white/50">
                   <h3 className="text-lg sm:text-5xl text-center px-10 text-gray-700 pb-6">
                     Award Winning Software Development Company
                   </h3>
@@ -56,7 +55,7 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="landing-2 shadow-inner lg:col-span-2 mt-6"></div>
+                <div className="animate__animated animate__fadeInBottomRight landing-2 shadow-inner lg:col-span-2 mt-6"></div>
               </div>
             </div>
           </main>
