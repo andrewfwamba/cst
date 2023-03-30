@@ -3,8 +3,34 @@ import Accordion from "../components/Accordion";
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import Contactus from "../components/Contactus";
 import Footer from "../components/Footer";
+import Swal from "sweetalert2";
 
 function Support() {
+  const alert = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "This will send Weekly news to your email!",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "grey",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, it's okay!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          "Great!",
+          "Your will receive weekly newsletters from us. You may unsubscrbe anytime",
+          "success"
+        );
+      }
+    });
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    alert();
+  };
+
   return (
     <>
       <div className="animate__animated animate__backInUp relative isolate overflow-hidden mt-1 bg-gray-900 py-2 sm:py-4 lg:py-8">
@@ -33,6 +59,7 @@ function Support() {
                 <button
                   type="submit"
                   className="flex-none rounded-md bg-indigo-500 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                  onClick={submit}
                 >
                   Subscribe
                 </button>
