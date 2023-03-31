@@ -21,7 +21,7 @@ const Footer = () => {
             ullam iste repellat consequatur libero reiciendis, blanditiis
             accusantium.
           </p>
-          <div className="flex justify-between md:w-[75%] my-6">
+          <div className="flex justify-between mx-auto md:w-[75%] my-6">
             <FaFacebookSquare size={30} />
             <FaInstagram size={30} />
             <FaTwitterSquare size={30} />
