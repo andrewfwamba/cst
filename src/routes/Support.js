@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Accordion from "../components/Accordion";
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import Contactus from "../components/Contactus";
@@ -6,13 +6,18 @@ import Footer from "../components/Footer";
 import Swal from "sweetalert2";
 
 function Support() {
+  const [email, setEmail] = useState("");
+  const validate = () => {
+    const Regexp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    return Regexp.test(email);
+  };
   const alert = () => {
     Swal.fire({
       title: "Are you sure?",
       text: "This will send Weekly news to your email!",
       icon: "question",
       showCancelButton: true,
-      confirmButtonColor: "grey",
+      confirmButtonColor: "gray",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, it's okay!",
     }).then((result) => {
@@ -20,15 +25,44 @@ function Support() {
         Swal.fire(
           "Great!",
           "Your will receive weekly newsletters from us. You may unsubscrbe anytime",
-          "success"
+          ""
         );
       }
+    });
+  };
+  const failedAlert = () => {
+    Swal.fire({
+      icon: "",
+      title: "Oops...",
+      html: "Something went wrong",
+      footer: '<a href="#">Why do I have this issue?</a>',
+    });
+  };
+  const invalidAlert = () => {
+    Swal.fire({
+      title: "Error",
+      text: "Input valid email address",
+      icon: "warning",
+      showCancelButton: false,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
     });
   };
 
   const submit = (e) => {
     e.preventDefault();
-    alert();
+    if (validate()) {
+      try {
+        console.log(email);
+        alert();
+      } catch (error) {
+        console.log(error.message);
+        failedAlert();
+      }
+    } else {
+      console.log("please input a valid email address");
+      invalidAlert();
+    }
   };
 
   return (
@@ -52,9 +86,10 @@ function Support() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  required
                   className="min-w-fit flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                 />
                 <button
                   type="submit"
