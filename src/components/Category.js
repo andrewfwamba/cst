@@ -41,7 +41,7 @@ export default function Category() {
                   <img
                     src={callout.imageSrc}
                     alt={callout.imageAlt}
-                    className="h-full w-full object-cover object-center"
+                    className="h-full w-full object-cover transition hover:scale-110 duration-300 ease-in-out object-center"
                   />
                 </div>
                 <h3 className="mt-6 text-sm text-gray-500">

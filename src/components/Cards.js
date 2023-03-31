@@ -7,7 +7,7 @@ function Cards() {
       <h3 className="text-center text-gray-600 text-lg border-dotted border-2 px-4 py-2 font-bold">
         Our Services
       </h3>
-      <div className="grid ease-in-out animate__animated  animate__fadeIn lg:grid-cols-4 gap-8 px-5 lg:px-10 h-full sm:p-6 py-2">
+      <div className="grid ease-in-out animate__animated  animate__fadeIn sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-5 lg:px-10 h-full sm:p-6 py-2">
         <div className="w-full p-4 hover:opacity-100 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
           <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-blue-500">
             Placeholder
