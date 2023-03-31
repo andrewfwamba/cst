@@ -16,7 +16,7 @@ const alert = () => {
     hideClass: {
       popup: "animate__animated animate__fadeOutUp",
     },
-    timer: 2000,
+    timer: 2500,
   });
 };
 const onSubmit = (e) => {
