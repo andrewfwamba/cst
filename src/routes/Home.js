@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
 import Cards from "../components/Cards";
+import Pricing from "../components/Pricing";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -25,7 +26,7 @@ function Home() {
               <div className="landing-wrapper mx-auto grid lg:grid-cols-3 gap-8 text-gray-600">
                 <div className="animate__animated animate__fadeInLeft landing-1 sm:bg-gradient-to-r bg-gradient-to-b from-blue-200/50 to-white/50">
                   <h3 className="text-lg sm:text-5xl text-center px-10 text-gray-700 pb-6">
-                    Award Winning Software Development Company
+                    Leading Software Development Company
                   </h3>
                   <p className="text-gray-600 px-6 text-center">
                     We are a team of software engineers, user experience
@@ -64,6 +65,10 @@ function Home() {
         <div className="p-2 p-y w-full mb-10 ">
           <Cards />
         </div>
+        <div className="p-2 p-y w-full mb-10 ">
+          <Pricing />
+        </div>
+
         <Footer />
       </>
     );
