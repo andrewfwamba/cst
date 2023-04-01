@@ -27,7 +27,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<AppLayout />} errorElement={<ErrorPage />}>
       <Route errorElement={<ErrorPage />}>
-        <Route index element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/statistics" element={<Stats />} />
         <Route exact path="/products" element={<Products />} />
         <Route exact path="/support" element={<Support />} />
