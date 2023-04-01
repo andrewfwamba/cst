@@ -2,6 +2,7 @@ import * as React from "react";
 import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Outlet,
   Route,
@@ -23,7 +24,7 @@ const AppLayout = () => (
   </>
 );
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route element={<AppLayout />} errorElement={<ErrorPage />}>
       <Route errorElement={<ErrorPage />}>
