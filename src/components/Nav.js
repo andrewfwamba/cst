@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
@@ -23,7 +23,7 @@ function classNames(...classes) {
 }
 
 function Nav({ showSidebar }) {
-  const [userinfo, setUserinfo] = useState([]);
+  // const [userinfo, setUserinfo] = useState([]);
   // useEffect(() => {
   //   const data = JSON.parse(localStorage.getItem("user"));
   //   setUserinfo(data);
