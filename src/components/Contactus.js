@@ -19,13 +19,46 @@ const alert = () => {
     timer: 2500,
   });
 };
-const onSubmit = (e) => {
-  e.preventDefault();
-  alert();
-};
 
 export default function Contactus() {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
   const [agreed, setAgreed] = useState(false);
+
+  const validate = () => {
+    const Regexp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    return (
+      Regexp.test(email) &
+      (phone.length > 9) &
+      (firstname.length >= 3) &
+      (lastname.length >= 3) &
+      (message.length >= 15) &
+      (agreed === true)
+    );
+  };
+  const invalidAlert = () => {
+    Swal.fire({
+      title: "Error",
+      text: "Check your fileds and try again.",
+      icon: "warning",
+      showCancelButton: false,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+    });
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert();
+    } else {
+      invalidAlert();
+    }
+  };
 
   return (
     <div className="animate__animated animate__fadeInTopRight isolate bg-white py-5 px-6 sm:py-4 lg:px-8">
@@ -52,6 +85,8 @@ export default function Contactus() {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
+                value={firstname}
+                onChange={(e) => setFirstname(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -69,6 +104,8 @@ export default function Contactus() {
                 name="last-name"
                 id="last-name"
                 autoComplete="family-name"
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -86,6 +123,8 @@ export default function Contactus() {
                 name="company"
                 id="company"
                 autoComplete="organization"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -103,6 +142,8 @@ export default function Contactus() {
                 name="email"
                 id="email"
                 autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -139,6 +180,8 @@ export default function Contactus() {
                 name="phone-number"
                 id="phone-number"
                 autoComplete="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -155,6 +198,8 @@ export default function Contactus() {
                 name="message"
                 id="message"
                 rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 defaultValue={""}
               />
