@@ -41,7 +41,7 @@ function Home() {
 
                   <div className="flex flex-row w-full relative">
                     <input
-                      class="shadow text-sm pad-r appearance-none border h-10 sm:h-12 rounded w-full py-2 text-gray-700 leading-tight focus:outline-none mt-5 focus:shadow-outline"
+                      className="shadow text-sm pad-r appearance-none border h-10 sm:h-12 rounded w-full py-2 text-gray-700 leading-tight focus:outline-none mt-5 focus:shadow-outline"
                       id="username"
                       type="email"
                       placeholder="Enter your email"
