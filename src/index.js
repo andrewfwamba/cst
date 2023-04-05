@@ -15,6 +15,7 @@ import "./Utils.css";
 import ErrorPage from "./routes/error-page";
 import Stats from "./routes/Stats";
 import Support from "./routes/Support";
+import Team from "./routes/Team";
 
 const AppLayout = () => (
   <>
@@ -28,6 +29,7 @@ const router = createHashRouter(
     <Route element={<AppLayout />} errorElement={<ErrorPage />}>
       <Route errorElement={<ErrorPage />}>
         <Route index path="/" element={<Home />} />
+        <Route exact path="/team" element={<Team />} />
         <Route exact path="/statistics" element={<Stats />} />
         <Route exact path="/products" element={<Products />} />
         <Route exact path="/support" element={<Support />} />
