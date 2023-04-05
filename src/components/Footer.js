@@ -13,13 +13,17 @@ const Footer = () => {
     <>
       <div className="max-w-[1240px] mx-auto py-16 px-8 grid lg:grid-cols-3 gap-8 text-gray-600">
         <div>
-          <Link to="#" className="logo text-gray-800">
+          <Link to="#" className="logo text-base font-medium text-gray-800">
             Crewsoft&trade;
           </Link>
-          <p className="py-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit
-            ullam iste repellat consequatur libero reiciendis, blanditiis
-            accusantium.
+          <p className="py-2 text-base">
+            A kenyan information technology company that specializes in
+            providing internet related services. We offer affordable web app
+            design,mobile application design and all other software development
+            services to organizations accross the globe.
+            {/* It's our constant endeavor to continue being the leader in providing client based
+            customized web design,web development,customized software
+            development, SEO and solutions services */}
           </p>
           <div className="flex justify-between mx-auto md:w-[75%] my-6">
             <FaFacebookSquare size={30} />
