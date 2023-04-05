@@ -148,10 +148,10 @@ function Nav({ showSidebar }) {
               <Disclosure.Panel className="md:hidden">
                 <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                   {navigation.map((item) => (
-                    <Link
+                    <Disclosure.Button
                       key={item.name}
                       as="a"
-                      to={item.href}
+                      href={`#${item.href}`}
                       className={classNames(
                         item.current
                           ? "bg-gray-900 text-white"
@@ -161,7 +161,7 @@ function Nav({ showSidebar }) {
                       aria-current={item.current ? "page" : undefined}
                     >
                       {item.name}
-                    </Link>
+                    </Disclosure.Button>
                   ))}
                 </div>
                 {/* <div className="border-t border-gray-700 pt-4 pb-3">
