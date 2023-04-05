@@ -1,5 +1,5 @@
-import { useRouteError } from "react-router-dom";
-import '../App.css'
+import { Link, useRouteError } from "react-router-dom";
+import "../App.css";
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -12,6 +12,9 @@ export default function ErrorPage() {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+      <div className="p-4 text-gray-900 italic font-bold cursor-pointer rounded-md mt-8">
+        <Link to="/">--{">"}Take me Home</Link>
+      </div>
     </div>
   );
 }
