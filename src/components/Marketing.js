@@ -26,16 +26,16 @@ const posts = [
     title: "Increase productivty",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
+      "Leveraging business programs and management software can actually improve the accuracy and effectiveness of departmental functions, as it decreases the likelihood of human error while providing real time data and analytics through dashboards and reporting.",
     date: "Feb 18, 2023",
     datetime: "2023-02-18",
     category: { title: "Software Development", href: "#" },
     author: {
-      name: "Andrew Ecorrex",
-      role: "Senior Software Engineer",
+      name: "Andrew Fwamba",
+      role: "Software Engineer",
       href: "#",
       imageUrl:
-        "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80",
+        "https://res.cloudinary.com/doxety4ay/image/upload/v1667404489/636292b13dd43d7482248a4a_profile.jpg",
     },
   },
   {
@@ -154,7 +154,7 @@ export default function Marketing() {
                       {post.title}
                     </a>
                   </h3>
-                  <p className="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">
+                  <p className="mt-5 text-sm leading-6 text-left text-gray-600 line-clamp-3">
                     {post.description}
                   </p>
                 </div>
