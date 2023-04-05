@@ -18,15 +18,19 @@ function Support() {
       icon: "question",
       showCancelButton: true,
       confirmButtonColor: "gray",
+      customClass: {
+        container: "swal-width",
+        title: "swal-text",
+      },
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, it's okay!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          "Great!",
-          "Your will receive weekly newsletters from us. You may unsubscrbe anytime",
-          ""
-        );
+        Swal.fire({
+          title: "Great!",
+          html: "Your will receive weekly newsletters from us. You may unsubscrbe anytime",
+          icon: "",
+        });
       }
     });
   };
@@ -54,6 +58,14 @@ function Support() {
     if (validate()) {
       try {
         console.log(email);
+        function charFrequency(str) {
+          const freq = {};
+          str.split("").forEach((char) => {
+            freq[char] = (freq[char] || 0) + 1;
+          });
+          return freq;
+        }
+        console.log(charFrequency("I am awesome"));
         alert();
       } catch (error) {
         console.log(error.message);
@@ -67,15 +79,53 @@ function Support() {
 
   return (
     <>
-      <div className="grid lg:grid-cols-2">
-        <div className="w-full bg-gray-600"></div>
-        <div className="w-full bg-blue-500"></div>
+      <div className="animate__animated animate__fadeInDown grid lg:grid-cols-2 bg-gray-200">
+        <div className="w-full  py-8 text-center lg:pt-[10rem]">
+          <h6 className="text-red-400 font-medium">CONTACT NOW</h6>
+          <h3 className="text-blue-800 text-xl font-bold">
+            Have a Question? Talk to Us
+          </h3>
+          <p className="text-base px-8 text-gray-600 font-medium">
+            We will get back to you as early as we receive the message
+          </p>
+        </div>
+        <div className="w-full">
+          {/* phone contact */}
+          <div className="bg-gray-200 py-4 px-8 m-4 rounded shadow-lg hover:ring-1">
+            <h4 className="text-gray-700 text-lg font-bold text-start py-[auto]">
+              {" "}
+              Phone:
+            </h4>
+            <h6 className="text-gray-800 text-base font-light py-4">
+              Availability hours: Monday - Friday, 9am to 5pm
+            </h6>
+            <p itemprop="telephone" className="font-bold text-lg text-gray-700">
+              <a href="tel:+254712123456">(+254) 712 123456</a>
+            </p>
+          </div>
+          {/* email contact */}
+          <div className="bg-gray-200 py-4 px-8 m-4 rounded shadow-lg hover:ring-1">
+            <h4 className="text-gray-700 text-lg font-bold text-start py-3">
+              {" "}
+              Email:
+            </h4>
+            <h6 className="text-gray-800 text-base font-light py-4">
+              Our support team will get back to you within 24hours on standard
+              business hours.
+            </h6>
+            <p itemprop="email" className="font-bold text-lg text-gray-700">
+              <a href="mailto: info@example.com"> Send us an email</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="animate__animated animate__backInUp relative isolate overflow-hidden mt-1 bg-gray-900 py-2 sm:py-4 lg:py-8">
+
+      {/* Email insights */}
+      <div className="animate__animated animate__backInUp relative isolate overflow-hidden mt-1 bg-gray-800 py-2 sm:py-4 lg:py-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 lg:max-w-none lg:grid-cols-2">
-            <div className="max-w-xl lg:max-w-lg">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <div className="max-w-xl mx-auto lg:max-w-lg">
+              <h2 className="text-base lg:text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Get New Insights Weekly
               </h2>
               <p className="mt-4 text-lg leading-8 text-gray-300">
