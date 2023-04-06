@@ -46,10 +46,16 @@ function Nav({ showSidebar }) {
                       {/* <Link to="#" className="menu-bars text-white">
                         <FaIcons.FaBars onClick={showSidebar} />
                       </Link> */}
+
                       <Link
                         to="#"
-                        className="logo text-sm sm:text-lg text-white"
+                        className="logo text-sm flex sm:text-lg text-white"
                       >
+                        <img
+                          className="h-6 mr-1 w-6 rounded-2xl"
+                          src={require("../logo1.png")}
+                          alt="logo"
+                        />
                         Crewsoft&trade;
                       </Link>
                     </div>
