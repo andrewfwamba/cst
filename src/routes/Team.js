@@ -27,7 +27,7 @@ function Team() {
   ];
   return (
     <>
-      <div className="w-full px-10 py-10">
+      <div className="w-full px-2 py-5">
         <div>
           <h2 className="animate__animated animate__bounceIn text-gray-700 sm:text-left pb-5 font-semibold">
             Our Team
@@ -56,7 +56,7 @@ function Team() {
         </div>
       </div>
       {/* Our mission */}
-      <div className="animate__animated animate__lightSpeedInLeft w-full px-2 sm:px-10 py-10">
+      <div className="animate__animated animate__lightSpeedInLeft w-full px-2 sm:px-10 py-4">
         <div>
           <h2 className="text-gray-700 sm:text-left pb-5 font-semibold">
             Our Mission
