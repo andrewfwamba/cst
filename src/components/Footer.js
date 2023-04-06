@@ -11,9 +11,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="max-w-[1240px] mx-auto py-16 px-8 grid lg:grid-cols-3 gap-8 text-gray-600">
+      <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-600">
         <div>
-          <Link to="#" className="logo text-base font-medium text-gray-800">
+          <Link
+            to="#"
+            className="logo flex text-base font-medium text-gray-800"
+          >
             Crewsoft&trade;
           </Link>
           <p className="py-2 text-base">
@@ -40,7 +43,6 @@ const Footer = () => {
             </h6>
             <ul>
               <li className="py-1 text-xs lg:text-sm">Analytics</li>
-              <li className="py-1 text-xs lg:text-sm">Marketing</li>
               <li className="py-1 text-xs lg:text-sm">Commerce</li>
               <li className="py-1 text-xs lg:text-sm">Insights</li>
             </ul>
@@ -52,7 +54,6 @@ const Footer = () => {
             <ul>
               <li className="py-1 text-xs lg:text-sm">Pricing</li>
               <li className="py-1 text-xs lg:text-sm">Docs</li>
-              <li className="py-1 text-xs lg:text-sm">Guides</li>
               <li className="py-1 text-xs lg:text-sm">APIs</li>
             </ul>
           </div>
@@ -63,8 +64,6 @@ const Footer = () => {
             <ul>
               <li className="py-1 text-xs lg:text-sm">About</li>
               <li className="py-1 text-xs lg:text-sm">Blog</li>
-              <li className="py-1 text-xs lg:text-sm">Jobs</li>
-              <li className="py-1 text-xs lg:text-sm">Press</li>
               <li className="py-1 text-xs lg:text-sm">Careers</li>
             </ul>
           </div>
