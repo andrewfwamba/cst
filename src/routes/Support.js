@@ -4,6 +4,7 @@ import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import Contactus from "../components/Contactus";
 import Footer from "../components/Footer";
 import Swal from "sweetalert2";
+import Location from "../components/Location";
 
 function Support() {
   const [email, setEmail] = useState("");
@@ -120,8 +121,11 @@ function Support() {
         </div>
       </div>
 
+      {/* Location */}
+      <Location />
+
       {/* Email insights */}
-      <div className="animate__animated animate__backInUp relative isolate overflow-hidden mt-1 bg-gray-800 py-2 sm:py-4 lg:py-8">
+      <div className="animate__animated animate__backInUp relative isolate overflow-hidden bg-gray-800 pb-2 sm:py-4 lg:py-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl mx-auto lg:max-w-lg">
