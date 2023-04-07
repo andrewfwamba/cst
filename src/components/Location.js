@@ -16,7 +16,7 @@ function Location() {
   //   const center = useMemo(() => ({ lat: 18.52043, lng: 73.856743 }), []);
   const markers = [
     // { address: "Nairobi", lat: -1.304, lng: 36.8774 },
-    { address: "Crewsoft Technologies", lat: -0.2835, lng: 36.0775 },
+    { address: "Crewsoft Technologies", lat: -0.282836, lng: 36.07522 },
     { address: "Nakuru", lat: -0.303099, lng: 36.080025 },
   ];
   // const google = (window.google = window.google ? window.google : {});
