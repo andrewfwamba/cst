@@ -51,11 +51,6 @@ function Nav({ showSidebar }) {
                         to="#"
                         className="logo text-sm flex sm:text-lg text-white"
                       >
-                        {/* <img
-                          className="h-6 mr-1 w-6 rounded-2xl"
-                          src={require("../logo1.png")}
-                          alt="logo"
-                        /> */}
                         Crewsoft&trade;
                       </Link>
                     </div>
