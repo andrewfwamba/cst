@@ -10,12 +10,12 @@
     {
       "src": "logo2.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "52x57"
     },
     {
       "src": "crewsoftgold.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "396x70"
     }
   ],
   "start_url": ".",
