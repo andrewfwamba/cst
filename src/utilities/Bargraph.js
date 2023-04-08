@@ -66,8 +66,8 @@ function Bargraph() {
               // y-axis data plotting values
               data: [200, 300, 500, 1020, 1500, 2350, 3150],
               fill: false,
-              borderWidth: 4,
-              backgroundColor: "blue",
+              borderWidth: 2,
+              backgroundColor: "gray",
               borderColor: "lightgreen",
               responsive: true,
             },
