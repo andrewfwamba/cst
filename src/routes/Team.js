@@ -29,7 +29,7 @@ function Team() {
     <>
       <div className="w-full px-2 py-5">
         <div>
-          <h2 className="animate__animated animate__bounceIn text-gray-700 sm:text-left pb-5 font-semibold">
+          <h2 className="animate__animated animate__bounceIn text-gray-700 sm:text-left sm:px-10 pb-5 font-semibold">
             Our Team
           </h2>
           <p className="animate__animated animate__flipInX pb-10">
@@ -39,13 +39,13 @@ function Team() {
           </p>
         </div>
         {/* Teams */}
-        <div className="animate__animated animate__fadeInDown grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 px-3 sm:px-8">
+        <div className="animate__animated animate__fadeInDown grid gap-1 grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 mx-auto px-3 sm:px-8">
           {team.map((teams) => (
             <div key={teams.id} className="h-[180px] w-[170px]">
               <img
                 src={teams.imageUrl}
                 alt=""
-                className="h-20 w-20 ml-3 rounded-full mb-8"
+                className="h-20 w-20 rounded-full mb-8"
               />
               <h5 className="text-base text-gray-900 font-black">
                 {teams.name}
@@ -115,6 +115,82 @@ function Team() {
             <h2 className="text-gray-600 text-left font-medium text-base">
               Annual users
             </h2>
+          </div>
+        </div>
+      </div>
+      {/* Our values */}
+      <div className="w-full px-2 py-4 sm:px-8 ">
+        <div>
+          <h2 className="text-gray-700 sm:text-left pb-5 font-semibold">
+            Our Values
+          </h2>
+          <div className="w-1/2">
+            <p className="pb-10">
+              To provide you a wide range of services, we think broadly and are
+              active on all trending technological platforms.
+            </p>
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+          <div className="p-4 mx-auto">
+            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+              Be world-class
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
+              in laborum sed rerum et corporis.
+            </p>
+          </div>
+          <div className="mx-auto p-4">
+            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+              Integrity
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
+              in laborum sed rerum et corporis.
+            </p>
+          </div>
+          <div className="mx-auto p-4">
+            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+              Always Learning
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
+              in laborum sed rerum et corporis.
+            </p>
+          </div>
+          <div className="mx-auto p-4">
+            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+              Innovative
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
+              in laborum sed rerum et corporis.
+            </p>
+          </div>
+          <div className="mx-auto p-4">
+            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+              Be supportive
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
+              in laborum sed rerum et corporis.
+            </p>
+          </div>
+          <div className="mx-auto p-4">
+            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+              Focus on the user
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
+              in laborum sed rerum et corporis.
+            </p>
           </div>
         </div>
       </div>
