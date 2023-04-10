@@ -22,9 +22,10 @@ const Footer = () => {
           <p className="py-2 text-base">
             A kenyan information technology company that specializes in
             providing internet related services. We offer affordable web app
-            design,mobile application design and all other software development
+            design,mobile application design and...
+            {/* all other software development
             services to organizations accross the globe.
-            {/* It's our constant endeavor to continue being the leader in providing client based
+            It's our constant endeavor to continue being the leader in providing client based
             customized web design,web development,customized software
             development, SEO and solutions services */}
           </p>
