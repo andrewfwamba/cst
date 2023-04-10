@@ -124,10 +124,10 @@ function Team() {
           <h2 className="text-gray-700 sm:text-left pb-5 font-semibold">
             Our Values
           </h2>
-          <div className="w-1/2">
-            <p className="pb-10">
+          <div className="md:w-1/2">
+            <p className="pb-10 px-4">
               To provide you a wide range of services, we think broadly and are
-              active on all trending technological platforms.
+              active on all trending tech platforms.
             </p>
           </div>
         </div>
