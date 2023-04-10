@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
 import Cards from "../components/Cards";
-import Pricing from "../components/Pricing";
+import Choice from "../components/Choice";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -49,7 +49,7 @@ function Home() {
                     <div className="mt-7 absolute top-0 sm:top-1 right-0.5 sm:right-1">
                       <Link
                         to="#"
-                        className="py-2 ml-2 px-2 text-xs sm:text-sm font-normal text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                        className="py-2 ml-2 px-2 text-xs sm:text-sm font-normal text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-gray-200 ring-1 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                       >
                         Get a demo
                       </Link>
@@ -66,7 +66,8 @@ function Home() {
           <Cards />
         </div>
         <div className="p-2 p-y w-full mb-10 ">
-          <Pricing />
+          {/* <Pricing /> */}
+          <Choice />
         </div>
 
         <Footer />
