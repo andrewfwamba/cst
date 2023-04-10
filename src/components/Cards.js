@@ -7,7 +7,7 @@ function Cards() {
         Our Services
       </h3>
       <div className="grid overflow-hidden ease-in-out animate__animated  animate__fadeIn sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-5 lg:px-10 h-full sm:p-6 py-2">
-        <div className="w-full hover:-translate-y-1 p-4 relative hover:opacity-100 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
+        <div className="w-full hover:-translate-y-1 p-4 relative hover:opacity-100 hover:shadow-blue-300 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
           <h5 className="mb-2 text-xl font-bold  text-gray-900 dark:text-blue-500">
             App Development
           </h5>
@@ -109,7 +109,7 @@ function Cards() {
           </div>
         </div>
 
-        <div className="w-full transition-all hover:-translate-y-1 p-4 relative hover:opacity-100 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
+        <div className="w-full transition-all hover:-translate-y-1 p-4 relative hover:opacity-100 hover:shadow-blue-300 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
           <h5 className="mb-2 text-xl font-bold  text-gray-900 dark:text-blue-500">
             Web Development
           </h5>
@@ -211,7 +211,7 @@ function Cards() {
           </div>
         </div>
 
-        <div className="w-full hover:-translate-y-1 transition-all p-4 relative hover:opacity-100 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
+        <div className="w-full hover:-translate-y-1 transition-all p-4 relative hover:opacity-100 hover:shadow-blue-300 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
           <h5 className="mb-2 text-xl font-bold  text-gray-900 dark:text-blue-500">
             Cloud Services
           </h5>
@@ -298,7 +298,7 @@ function Cards() {
           </div>
         </div>
 
-        <div className="w-full hover:-translate-y-1 transition-all p-4 relative hover:opacity-100 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
+        <div className="w-full hover:-translate-y-1 transition-all p-4 relative hover:opacity-100 hover:shadow-blue-300 text-center bg-white border border-gray-200 rounded-lg shadow-2xl hover:shadow-xl sm:p-8 dark:bg-white dark:border-gray-300">
           <h5 className="mb-2 text-xl font-bold  text-gray-900 dark:text-blue-500">
             ERP Systems
           </h5>
