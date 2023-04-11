@@ -55,9 +55,10 @@ function Choice() {
 
             <div className="px-3 lg:px-11">
               <p className="lg:ml-4 text-gray-600 text-base">
-                (UXD, UED, or XD) is the process of raising user satisfaction by
-                boosting the product's usability, accessibility, and enjoyable
-                user experience.
+                We create web pages and applications that are user-friendly,
+                versatile, compliant with enterprise standards, Google search
+                engine friendly, and include analytics to track the
+                effectiveness of your digital strategy.
               </p>
             </div>
           </div>
@@ -72,10 +73,9 @@ function Choice() {
 
             <div className="px-3 lg:px-11">
               <p className="lg:ml-4 text-gray-600 text-base">
-                We create web pages and applications that are user-friendly,
-                versatile, compliant with enterprise standards, Google search
-                engine friendly, and include analytics to track the
-                effectiveness of your digital strategy.
+                (UXD, UED, or XD) is the process of raising user satisfaction by
+                boosting the product's usability, accessibility, and enjoyable
+                user experience.
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ function Choice() {
             </p>
             <a
               href="/"
-              className="p-2 bg-slate-700 rounded-xl text-gray-300 hover:text-white hover:bg-slate-800 ring-1 ring-gray-400"
+              className="p-3 bg-slate-700 rounded-xl text-xs text-gray-300 hover:text-white hover:bg-slate-800 ring-1 ring-gray-400"
             >
               Request A Quote
             </a>
