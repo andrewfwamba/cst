@@ -192,10 +192,6 @@ span {
     no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
-  width: 50%;
-  height: 400px;
-  border-radius: 10px;
 }
 
 /* form styling */
