@@ -25,6 +25,39 @@ function Team() {
         "https://res.cloudinary.com/doxety4ay/image/upload/v1667404489/636292b13dd43d7482248a4a_profile.jpg",
     },
   ];
+
+  const values = [
+    {
+      id: 1,
+      head: "Be world-class",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+    },
+    {
+      id: 2,
+      head: "Integrity",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+    },
+    {
+      id: 3,
+      head: "Always Learning",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+    },
+    {
+      id: 4,
+      head: "Innovative",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+    },
+    {
+      id: 5,
+      head: "Be supportive",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+    },
+    {
+      id: 6,
+      head: "Focus on the user",
+      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+    },
+  ];
   return (
     <>
       <div className="w-full px-2 py-5">
@@ -132,66 +165,14 @@ function Team() {
           </div>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
-          <div className="p-4 mx-auto">
-            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
-              Be world-class
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.
-            </p>
-          </div>
-          <div className="mx-auto p-4">
-            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
-              Integrity
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.
-            </p>
-          </div>
-          <div className="mx-auto p-4">
-            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
-              Always Learning
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.
-            </p>
-          </div>
-          <div className="mx-auto p-4">
-            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
-              Innovative
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.
-            </p>
-          </div>
-          <div className="mx-auto p-4">
-            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
-              Be supportive
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.
-            </p>
-          </div>
-          <div className="mx-auto p-4">
-            <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
-              Focus on the user
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-              expedita voluptas culpa sapiente alias molestiae. Numquam corrupti
-              in laborum sed rerum et corporis.
-            </p>
-          </div>
+          {values.map((value) => (
+            <div key={value.id} className="p-4 mx-auto">
+              <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+                {value.head}
+              </h3>
+              <p>{value.body}</p>
+            </div>
+          ))}
         </div>
       </div>
       <Footer />
