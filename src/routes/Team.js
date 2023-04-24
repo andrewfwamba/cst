@@ -32,7 +32,7 @@ function Team() {
           <h2 className="animate__animated animate__bounceIn text-gray-700 sm:text-left sm:px-10 pb-5 font-semibold">
             Our Team
           </h2>
-          <p className="animate__animated animate__flipInX pb-10">
+          <p className="animate__animated animate__flipInX w-full md:w-8/12 mx-2 text-sm md:text-base md:mx-8 pb-10">
             We are a team of software engineers, user experience designers, web
             content creators, and curators, and our goal is to help you begin
             your journey.
