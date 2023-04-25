@@ -1,8 +1,3 @@
-const stats = [
-  { id: 1, name: "Transactions every 24 hours", value: "44 million" },
-  { id: 2, name: "Assets under holding", value: "$119 trillion" },
-  { id: 3, name: "New users annually", value: "46,000" },
-];
 const posts = [
   {
     id: 1,
@@ -61,25 +56,6 @@ const posts = [
 export default function Marketing() {
   return (
     <>
-      <div className="bg-white py-4 sm:py-4 mt-2 sm:mt-2">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <dl className="grid grid-cols-1 gap-y-16 gap-x-8 text-center lg:grid-cols-3">
-            {stats.map((stat) => (
-              <div
-                key={stat.id}
-                className="mx-auto flex max-w-xs flex-col gap-y-4"
-              >
-                <dt className="text-base leading-7 text-gray-600">
-                  {stat.name}
-                </dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
       <section className="relative isolate overflow-hidden bg-white py-4 px-6 sm:py-2 lg:px-8">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
         <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-sm shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
@@ -133,7 +109,7 @@ export default function Marketing() {
       <div className="bg-white py-4 sm:py-2">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-xl">
+            <h2 className=" text-gray-700 sm:text-left md:pb-5 font-semibold">
               From the blog
             </h2>
             <p className="mt-0 text-lg leading-8 text-gray-600">
