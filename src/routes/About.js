@@ -1,5 +1,7 @@
 import React from "react";
 import Team from "./Team";
+import Marketing from "../components/Marketing";
+import Footer from "../components/Footer";
 
 function About() {
   return (
@@ -25,6 +27,8 @@ function About() {
         </div>
       </div>
       <Team />
+      <Marketing />
+      <Footer />
     </>
   );
 }
