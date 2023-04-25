@@ -25,11 +25,11 @@ function Home() {
             <div className="mx-auto  sm:max-w-[100%] w-full py-0">
               {/* hero wrapper */}
               <div className="mx-auto w-full grid lg:grid-cols-2 py-2 text-gray-600 bg-gradient-to-b sm:bg-gradient-to-r from-blue-200/50 to-white/50">
-                <div className="w-full p-8 animate__animated animate__fadeInLeft ">
+                <div className="w-full p-2 md:p-8 animate__animated animate__fadeInLeft ">
                   <h3 className="text-lg sm:text-5xl text-center font-semibold px-10 text-gray-700 pb-6">
                     Leading Software Development Company
                   </h3>
-                  <p className="text-gray-600 px-6 text-center">
+                  <p className="text-gray-600 p-2 md:px-6 text-center">
                     We are a team of software engineers, user experience
                     designers, web content creators, and curators, and our goal
                     is to help you begin your journey from where you are to
