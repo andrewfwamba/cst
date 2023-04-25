@@ -28,6 +28,12 @@ function About() {
       </div>
       <Team />
       <Marketing />
+      <div className="py-10">
+        <p className="text-gray-700 md:text-2xl mx-3 md:mx-6 font-bold text-center">
+          We approach the workplace as something that adds to our lives and adds
+          value to world.
+        </p>
+      </div>
       <Footer />
     </>
   );
