@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 
 function Team() {
   const team = [
@@ -175,7 +174,6 @@ function Team() {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 }
