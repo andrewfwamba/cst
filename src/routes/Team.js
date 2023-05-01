@@ -29,32 +29,32 @@ function Team() {
     {
       id: 1,
       head: "Be world-class",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "At Crewsoft Technologies, we are committed to being more than just a good software company - we strive to be world-class. Through our focus on building a strong foundation, investing in talent, embracing innovation, and delivering exceptional customer satisfaction, we aim to exceed expectations and achieve success on a global scale. Join us on this journey to greatness.",
     },
     {
       id: 2,
       head: "Integrity",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "Integrity is at the core of everything we do. We hold ourselves to the highest ethical standards, both in our interactions with our customers and in the development of our software. We believe that honesty, transparency, and accountability are essential for building long-term relationships with our customers and earning their trust. By prioritizing integrity in all aspects of our business, we aim to build a reputation as a company that our customers can rely on and trust.",
     },
     {
       id: 3,
       head: "Always Learning",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "Committed to continuous learning and development, both individually and as a team. We encourage our employees to seek out new challenges and opportunities, to ask questions and share ideas, and to stay up-to-date with the latest technologies and industry trends. By fostering a culture of learning, we can ensure that our team is equipped with the skills and knowledge necessary to deliver innovative and high-quality software solutions to our clients.",
     },
     {
       id: 4,
       head: "Innovative",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "We are always exploring new technologies, methodologies, and ideas to deliver the best possible software solutions to our clients. We believe that innovation is key to staying ahead of the curve and providing value to our customers. Our team of skilled professionals is encouraged to think creatively and push boundaries to develop cutting-edge software that drives business success. Join us on our mission to revolutionize the industry through innovative software solutions.",
     },
     {
       id: 5,
       head: "Be supportive",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "Success is a team effort. We prioritize building a supportive and collaborative work environment where everyone can thrive. Our team members are encouraged to help each other, share knowledge and expertise, and celebrate each other's successes. We also understand the importance of work-life balance and strive to provide a supportive and flexible work environment that accommodates the needs of our team members. By fostering a culture of support and teamwork, we can achieve great things together.",
     },
     {
       id: 6,
       head: "Focus on the user",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "Users come first. We believe that building great software starts with understanding the needs of our users and delivering solutions that meet those needs. Our team is dedicated to creating intuitive, user-friendly software that provides exceptional user experiences. We value feedback from our users and work diligently to incorporate it into our software development process. By focusing on the user, we can ensure that our software solutions are not only functional but also deliver real value to our clients.",
     },
   ];
   return (
@@ -163,13 +163,13 @@ function Team() {
             </p>
           </div>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
           {values.map((value) => (
-            <div key={value.id} className="p-4 mx-auto">
-              <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+            <div key={value.id} className=" rounded overflow-hidden bg-gradient-to-r from-blue-300 to-purple-300 mx-auto">
+              <h3 className="font-bold w-full bg-gray-200 p-1 text-center bg-gradient-to-r from-blue-300 to-violet-200 text-gray-800 text-base">
                 {value.head}
               </h3>
-              <p>{value.body}</p>
+              <p className="mx-8 my-2">{value.body}</p>
             </div>
           ))}
         </div>
