@@ -76,11 +76,11 @@ export default function Marketing() {
           </svg>
 
           <figure className="mt-1">
-            <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+            <blockquote className="text-center text-lg font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
               <p>
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                expedita voluptas culpa sapiente alias molestiae. Numquam
-                corrupti in laborum sed rerum et corporis.”
+                “Not taking any risks is the biggest risk of all. The only
+                approach that is certain to fail in a world that is changing
+                very quickly, is staying safe. ~ ~”
               </p>
             </blockquote>
             <figcaption className="mt-10">
