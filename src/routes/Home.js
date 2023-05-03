@@ -24,7 +24,7 @@ function Home() {
           <main>
             <div className="mx-auto  sm:max-w-[100%] w-full py-0">
               {/* hero wrapper */}
-              <div className="mx-auto w-full grid lg:grid-cols-2 py-2 text-gray-600 bg-gradient-to-b sm:bg-gradient-to-r from-blue-200/50 to-white/50">
+              <div className="mx-auto w-full grid lg:grid-cols-2 py-2 text-gray-600 bg-gradient-to-b sm:bg-gradient-to-r from-blue-200/25 to-white/50">
                 <div className="w-full p-2 md:p-8 animate__animated animate__fadeInLeft ">
                   <h3 className="text-lg sm:text-5xl text-center font-semibold px-10 text-gray-700 pb-6">
                     Leading Software Development Company
@@ -57,7 +57,9 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="w-full h-[18rem] lg:h-full animate__animated animate__fadeInBottomRight rounded bg-teal-200 landing-2"></div>
+                <div className="w-full h-[18rem] lg:h-full animate__animated animate__fadeInBottomRight rounded bg-teal-200 landing-2">
+                  {/* <img src={require('../utilities/images/designcomp.jpg')} alt="" className="w-full h-full rounded relative"/> */}
+                </div>
               </div>
             </div>
           </main>
