@@ -26,16 +26,18 @@ const AppLayout = () => (
 
 const router = createHashRouter(
   createRoutesFromElements(
-    <Route element={<AppLayout />} errorElement={<ErrorPage />}>
-      <Route errorElement={<ErrorPage />}>
-        <Route index path="/" element={<Home />} />
-        <Route exact path="/statistics" element={<Stats />} />
-        <Route exact path="/products" element={<Products />} />
-        <Route exact path="/support" element={<Support />} />
-        <Route exact path="/about" element={<About />} />
-        <Route />
+    <>
+      <Route element={<AppLayout />} errorElement={<ErrorPage />}>
+        <Route errorElement={<ErrorPage />}>
+          <Route index element={<Home />} />
+          <Route exact path="/statistics" element={<Stats />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/support" element={<Support />} />
+          <Route exact path="/about" element={<About />} />
+          <Route />
+        </Route>
       </Route>
-    </Route>
+    </>
   )
 );
 
