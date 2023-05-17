@@ -23,6 +23,13 @@ module.exports = {
         24: "6rem",
         32: "8rem",
       },
+      listStyleType: {
+        none: "none",
+        disc: "disc",
+        decimal: "decimal",
+        square: "square",
+        roman: "upper-roman",
+      },
     },
     extend: {},
   },
