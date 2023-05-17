@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 const posts = [
   {
     id: 1,
@@ -55,10 +57,11 @@ const posts = [
 
 export default function Marketing() {
   return (
-    <>
+    <Fragment className="">
+      <div className="bg-gray-100">
       <section className="relative isolate overflow-hidden bg-white py-4 px-6 sm:py-2 lg:px-8">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
-        <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-sm shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
+        <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-gray-50 shadow-sm shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
         <div className="mx-auto max-w-2xl lg:max-w-4xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -76,11 +79,11 @@ export default function Marketing() {
           </svg>
 
           <figure className="mt-1">
-            <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+            <blockquote className="text-center text-lg font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
               <p>
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                expedita voluptas culpa sapiente alias molestiae. Numquam
-                corrupti in laborum sed rerum et corporis.”
+                “Not taking any risks is the biggest risk of all. The only
+                approach that is certain to fail in a world that is changing
+                very quickly, is staying safe. ~ ~”
               </p>
             </blockquote>
             <figcaption className="mt-10">
@@ -106,7 +109,7 @@ export default function Marketing() {
           </figure>
         </div>
       </section>
-      <div className="bg-white py-4 sm:py-2">
+      <div className=" py-4 sm:py-2">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className=" text-gray-700 sm:text-left md:pb-5 font-semibold">
@@ -168,9 +171,9 @@ export default function Marketing() {
 
       {/* partners */}
 
-      <div className="bg-white py-4 sm:py-5 mt-4 mb-5">
+      <div className="border-t border-black py-4 sm:py-5 mt-4 mb-5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+          <h2 className="text-center text-lg font-semibold leading-8 text-blue-900">
             Trusted by the world’s most innovative teams
           </h2>
           <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
@@ -212,6 +215,7 @@ export default function Marketing() {
           </div>
         </div>
       </div>
-    </>
+      </div>
+    </Fragment>
   );
 }

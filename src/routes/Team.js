@@ -29,32 +29,32 @@ function Team() {
     {
       id: 1,
       head: "Be world-class",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "Crewsoft Technologies strives to be a world-class software company through building a strong foundation, investing in talent, embracing innovation, and delivering exceptional customer satisfaction to achieve global success.",
     },
     {
       id: 2,
       head: "Integrity",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "At Crewsoft Technologies, integrity is a top priority. The company adheres to the highest ethical standards, prioritizing honesty, transparency, and accountability in all aspects of the business to build long-term relationships with customers and earn their trust.",
     },
     {
       id: 3,
       head: "Always Learning",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "Crewsoft Technologies fosters a culture of continuous learning and development for individual and team growth. The company encourages employees to seek out new challenges, stay up-to-date with the latest technologies and industry trends, and share ideas to deliver innovative and high-quality software solutions for clients.",
     },
     {
       id: 4,
       head: "Innovative",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "We value innovation and continuously explore new technologies, methodologies, and ideas to deliver exceptional software solutions for clients. The team is encouraged to think creatively, push boundaries, and develop cutting-edge software that drives business success, in order to revolutionize the industry.",
     },
     {
       id: 5,
       head: "Be supportive",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "We emphasize the value of teamwork and building a supportive and collaborative work environment where everyone can thrive. We encourage team members to share knowledge and expertise, celebrate successes, and maintain work-life balance through a supportive and flexible work environment. The culture of support and teamwork enables the team to achieve great things together.",
     },
     {
       id: 6,
       head: "Focus on the user",
-      body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis",
+      body: "We value user experience and places users at the center of their software development process. The team is dedicated to creating intuitive and user-friendly software that meets the needs of its users. We also value feedback from users and work diligently to incorporate it into the software development process, to ensure that the solutions provided are not only functional but also deliver real value to clients.",
     },
   ];
   return (
@@ -163,13 +163,13 @@ function Team() {
             </p>
           </div>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
           {values.map((value) => (
-            <div key={value.id} className="p-4 mx-auto">
-              <h3 className="font-bold w-full bg-gray-200 p-2 rounded text-gray-800 text-base">
+            <div key={value.id} className=" rounded overflow-hidden bg-gradient-to-r from-blue-100 to-purple-100 mx-auto">
+              <h3 className="font-bold w-full bg-gray-200 p-1 text-center bg-gradient-to-r from-blue-300 to-violet-200 text-gray-800 text-base">
                 {value.head}
               </h3>
-              <p>{value.body}</p>
+              <p className="mx-2 md:mx-4 my-2 text-xs sm:text-sm ">{value.body}</p>
             </div>
           ))}
         </div>
