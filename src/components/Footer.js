@@ -74,7 +74,9 @@ const Footer = () => {
             </h6>
             <ul>
               <li className="py-1 text-xs lg:text-sm">Claim</li>
-              <li className="py-1 text-xs lg:text-sm">Policy</li>
+              <li className="py-1 text-xs lg:text-sm">
+                <Link to="/legalterms">Policy</Link>
+              </li>
               <li className="py-1 text-xs lg:text-sm">Terms</li>
             </ul>
           </div>

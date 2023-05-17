@@ -16,6 +16,7 @@ import ErrorPage from "./routes/error-page";
 import Stats from "./routes/Stats";
 import Support from "./routes/Support";
 import About from "./routes/About";
+import Policy from "./routes/Policy";
 
 const AppLayout = () => (
   <>
@@ -34,6 +35,7 @@ const router = createHashRouter(
           <Route exact path="/products" element={<Products />} />
           <Route exact path="/support" element={<Support />} />
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/legalterms" element={<Policy />} />
           <Route />
         </Route>
       </Route>
