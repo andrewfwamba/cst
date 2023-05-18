@@ -2,6 +2,8 @@ import React from "react";
 import Refund from "../components/Refund";
 import Privacy from "../components/Privacy";
 import Terms from "../components/Terms";
+import Security from "../components/security";
+import Conduct from "../components/conduct";
 
 function Policy() {
   return (
@@ -10,6 +12,8 @@ function Policy() {
         <h3 className="border-b border-gray-400 pb-2">Legal Terms</h3>
       </div>
       <Terms />
+      <Conduct />
+      <Security />
       <Privacy />
       <Refund />
       <div className="w-full flex justify-between px-2 sm:px-10 py-2 text-xs text-gray-700 bg-gray-200">
