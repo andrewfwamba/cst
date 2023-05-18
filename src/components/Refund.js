@@ -2,7 +2,7 @@ import React from "react";
 
 function Refund() {
   return (
-    <div className="p-6 bg-gray-300">
+    <div className="py-2 px-4 bg-gray-300">
       <div className="border-t border-blue-900 my-1"></div>
       <div>
         <h1 className="font-bold text-lg">Refund Policy</h1>
@@ -74,8 +74,8 @@ function Refund() {
                 for a refund based on our refund policy criteria.
               </li>
               <li>
-                If approved, we will initiate the refund process within [number
-                of days] to the original payment method used for the purchase.
+                If approved, we will initiate the refund process within 90 days
+                to the original payment method used for the purchase.
               </li>
             </ul>
             <li className="text-gray-950 font-bold text-lg">Refund Options</li>
