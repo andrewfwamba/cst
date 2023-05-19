@@ -47,7 +47,7 @@ function Nav({ showSidebar }) {
                       </Link> */}
 
                       <Link
-                        to="#"
+                        to="/"
                         className="logo text-sm flex sm:text-lg text-white"
                       >
                         Crewsoft&trade;
