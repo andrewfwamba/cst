@@ -101,7 +101,7 @@ function Support() {
               Availability hours: Monday - Friday, 9am to 5pm
             </h6>
             <p itemprop="telephone" className="font-bold text-lg text-gray-700">
-              <a href="tel:+254712123456">(+254) 712 123456</a>
+              <a href="tel:+254 722 753364">(+254) 722 753364</a>
             </p>
           </div>
           {/* email contact */}
