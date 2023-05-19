@@ -7,14 +7,14 @@ function Team() {
       name: "Jairus Otiko",
       role: "Co-Founder / CTO",
       imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "http://res.cloudinary.com/doxety4ay/image/upload/v1684502956/6443ffd3c54053261978e1a2_profile.jpg",
     },
     {
       id: 2,
       name: "Moses Tenai",
       role: "Product Architect",
       imageUrl:
-        "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "http://res.cloudinary.com/doxety4ay/image/upload/v1684503168/6442d9296a465a80069ab957_profile.jpg",
     },
     {
       id: 3,
@@ -22,6 +22,20 @@ function Team() {
       role: "Software Engineer",
       imageUrl:
         "https://res.cloudinary.com/doxety4ay/image/upload/v1667404489/636292b13dd43d7482248a4a_profile.jpg",
+    },
+    {
+      id: 4,
+      name: "Evans Mambo",
+      role: "software engineer",
+      imageUrl:
+        "http://res.cloudinary.com/doxety4ay/image/upload/v1684503582/644839c4c8e6d41ff1a26a09_profile.jpg",
+    },
+    {
+      id: 5,
+      name: "Derick Nyaga",
+      role: "software engineer",
+      imageUrl:
+        "http://res.cloudinary.com/doxety4ay/image/upload/v1684504155/64677dd5b415936ea95a636f_profile.jpg",
     },
   ];
 
@@ -71,17 +85,15 @@ function Team() {
           </p>
         </div>
         {/* Teams */}
-        <div className="animate__animated animate__fadeInDown grid gap-1 grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 mx-auto px-3 sm:px-8">
+        <div className="animate__animated animate__fadeInDown w-full grid gap-1 grid-cols-3 md:grid-cols-5 lg:grid-cols-8 pl-3 sm:px-8">
           {team.map((teams) => (
-            <div key={teams.id} className="h-[180px] w-[170px]">
+            <div key={teams.id} className="h-full w-full mb-2">
               <img
                 src={teams.imageUrl}
                 alt=""
                 className="h-20 w-20 rounded-full mb-8"
               />
-              <h5 className="text-base text-gray-900 font-black">
-                {teams.name}
-              </h5>
+              <h5 className="text-xs text-gray-900 font-black">{teams.name}</h5>
               <p className="text-xs text-gray-700">{teams.role}</p>
             </div>
           ))}
@@ -165,11 +177,16 @@ function Team() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
           {values.map((value) => (
-            <div key={value.id} className=" rounded overflow-hidden bg-gradient-to-r from-blue-100 to-purple-100 mx-auto">
+            <div
+              key={value.id}
+              className=" rounded overflow-hidden bg-gradient-to-r from-blue-100 to-purple-100 mx-auto"
+            >
               <h3 className="font-bold w-full bg-gray-200 p-1 text-center bg-gradient-to-r from-blue-300 to-violet-200 text-gray-800 text-base">
                 {value.head}
               </h3>
-              <p className="mx-2 md:mx-4 my-2 text-xs sm:text-sm ">{value.body}</p>
+              <p className="mx-2 md:mx-4 my-2 text-xs sm:text-sm ">
+                {value.body}
+              </p>
             </div>
           ))}
         </div>
