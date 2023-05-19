@@ -82,7 +82,7 @@ function Choice() {
         </div>
         {/* Image illustration */}
         <div>
-          <div className="bg-gradient-to-r from-cyan-100 to-blue-700 mx-6 lg:mx-0 rounded p-1.5 mb-8">
+          <div className="bg-gradient-to-r from-cyan-100 to-blue-700 mx-1 lg:mx-0 rounded p-1.5 mb-8">
             <img
               src="https://unsplash.com/photos/SYTO3xs06fU/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjgxMTI4MTAy&force=true&w=1920"
               alt="Laptops on a table with users around"

@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(true);
-    }, 700);
+    }, 300);
     setLoading(false);
     return () => clearTimeout(timer);
   }, []);
@@ -26,7 +26,7 @@ function Home() {
               {/* hero wrapper */}
               <div className="mx-auto w-full grid lg:grid-cols-2 py-2 text-gray-600 bg-gradient-to-b sm:bg-gradient-to-r from-blue-200/25 to-white/50">
                 <div className="w-full p-2 md:p-8 animate__animated animate__fadeInLeft ">
-                  <h3 className="text-lg sm:text-5xl text-center font-semibold px-10 text-gray-700 pb-6">
+                  <h3 className="text-lg sm:text-5xl text-center font-semibold px-10 text-gray-700 md:pb-6">
                     Leading Software Development Company
                   </h3>
                   <p className="text-gray-600 p-2 md:px-6 text-center">
@@ -50,16 +50,14 @@ function Home() {
                     <div className="mt-7 absolute top-0 sm:top-1 right-0.5 sm:right-1">
                       <Link
                         to="#"
-                        className="py-2 ml-2 px-2 text-xs sm:text-sm font-normal text-gray-900 focus:outline-none bg-white rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-gray-200 ring-1 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                        className="py-2 ml-2 px-2 text-xs sm:text-sm font-normal text-gray-900 focus:outline-none bg-blue-300  rounded border border-gray-200 hover:bg-blue-600 hover:text-gray-200 focus:z-10 focus:ring-gray-300 ring-1 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                       >
                         Get a demo
                       </Link>
                     </div>
                   </div>
                 </div>
-                <div className="w-full h-[18rem] lg:h-full animate__animated animate__fadeInBottomRight rounded bg-teal-200 landing-2">
-                  {/* <img src={require('../utilities/images/designcomp.jpg')} alt="" className="w-full h-full rounded relative"/> */}
-                </div>
+                <div className="w-full h-[18rem] lg:h-full animate__animated animate__fadeInBottomRight rounded bg-teal-200 landing-2"></div>
               </div>
             </div>
           </main>
