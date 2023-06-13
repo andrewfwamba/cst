@@ -4,6 +4,8 @@ import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import Contactus from "../components/Contactus";
 import Footer from "../components/Footer";
 import Swal from "sweetalert2";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Location from "../components/Location";
 
 function Support() {
@@ -11,6 +13,11 @@ function Support() {
   const validate = () => {
     const Regexp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     return Regexp.test(email);
+  };
+  const failed = () => {
+    toast.error("Error Notification !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
   const alert = () => {
     Swal.fire({
@@ -74,12 +81,14 @@ function Support() {
       }
     } else {
       console.log("please input a valid email address");
-      invalidAlert();
+      // invalidAlert();
+      failed();
     }
   };
 
   return (
     <>
+      <ToastContainer />
       <div className="animate__animated animate__fadeInDown grid lg:grid-cols-2 bg-gray-200">
         <div className="w-full  py-8 text-center lg:pt-[10rem]">
           <h6 className="text-red-400 font-medium">CONTACT NOW</h6>
