@@ -1,28 +1,35 @@
 const callouts = [
   {
-    name: "Desk and Office",
-    description: "Work from home accessories",
+    name: "Enterprise management",
+    description: "Get fluid management for your businesses",
     imageSrc:
       "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg",
     imageAlt:
       "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
+    href: "/",
+  },
+  {
+    name: "Custom softwares",
+    description: "Get custom softwares for your specific business needs",
+    imageSrc:
+      "https://unsplash.com/photos/XJXWbfSo2f0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfHx8fDE2ODY5OTU4ODd8MA&force=true&w=1920",
+    imageAlt: "Desktop display with code editor open",
     href: "#",
   },
   {
-    name: "Self-Improvement",
-    description: "Journals and note-taking",
+    name: "Mobile Apps",
+    description: "Get Mobile fast mobile apps both custom and proprietary",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg",
-    imageAlt:
-      "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    href: "#",
-  },
-  {
-    name: "Travel",
-    description: "Daily commute essentials",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg",
+      "https://unsplash.com/photos/w33-zg-dNL4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg3MDAwNzM4fA&force=true&w=1920",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
+    href: "#",
+  },
+  {
+    name: "Shule Soft",
+    description: "School management  system coming soon",
+    imageSrc:
+      " https://unsplash.com/photos/89xuP-XmyrA/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjg3MDAzNDgyfA&force=true&w=1920",
+    imageAlt: "mobile app code editor illustration.",
     href: "#",
   },
 ];
@@ -31,7 +38,7 @@ export default function Category() {
   return (
     <div className="bg-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+        <div className="mx-auto max-w-2xl py-4 sm:py-6 lg:max-w-none lg:py-8">
           <h2 className="text-2xl font-bold text-gray-900">Collections</h2>
 
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">

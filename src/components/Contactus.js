@@ -227,7 +227,7 @@ export default function Contactus() {
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-600">
               By selecting this, you agree to our{" "}
-              <Link to="#" className="font-semibold text-indigo-600">
+              <Link to="/legalterms" className="font-semibold text-indigo-600">
                 privacy&nbsp;policy
               </Link>
               .
