@@ -1,17 +1,22 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import {
+  createHashRouter,
+  createRoutesFromElements,
+  Outlet,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Home from "./routes/Home";
 import Products from "./routes/Products";
 import "./App.css";
 import "./Utils.css";
 import ErrorPage from "./routes/error-page";
-import Empty from "./routes/default";
-import Login from "./routes/Login";
 import Stats from "./routes/Stats";
-import Signup from "./routes/Signup";
 import Support from "./routes/Support";
+import About from "./routes/About";
+import Policy from "./routes/Policy";
 
 const AppLayout = () => (
   <>
@@ -20,48 +25,26 @@ const AppLayout = () => (
   </>
 );
 
-const router = createBrowserRouter([
-  {
-    path: "login",
-    element: <Login />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "signup",
-    element: <Signup />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/",
-    element: <AppLayout />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        errorElement: <ErrorPage />,
-        children: [
-          { index: true, element: <Empty /> },
-          {
-            path: "home",
-            element: <Home />,
-          },
-          {
-            path: "statistics",
-            element: <Stats />,
-          },
-          {
-            path: "support",
-            element: <Support />,
-          },
-          {
-            path: "products",
-            element: <Products />,
-          },
-        ],
-      },
-    ],
-  },
-]);
+const router = createHashRouter(
+  createRoutesFromElements(
+    <>
+      <Route element={<AppLayout />} errorElement={<ErrorPage />}>
+        <Route errorElement={<ErrorPage />}>
+          <Route index element={<Home />} />
+          <Route exact path="/statistics" element={<Stats />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/support" element={<Support />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/legalterms" element={<Policy />} />
+          <Route />
+        </Route>
+      </Route>
+    </>
+  )
+);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

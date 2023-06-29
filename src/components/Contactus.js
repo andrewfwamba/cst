@@ -2,41 +2,66 @@ import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+const alert = () => {
+  Swal.fire({
+    title: "Great. We will reach back to you soon.",
+    showClass: {
+      popup: "animate__animated animate__fadeInDown",
+    },
+    hideClass: {
+      popup: "animate__animated animate__fadeOutUp",
+    },
+    timer: 2500,
+  });
+};
 
 export default function Contactus() {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
   const [agreed, setAgreed] = useState(false);
 
+  const validate = () => {
+    const Regexp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    return (
+      Regexp.test(email) &
+      (phone.length > 9) &
+      (firstname.length >= 3) &
+      (lastname.length >= 3) &
+      (message.length >= 15) &
+      (agreed === true)
+    );
+  };
+  const invalidAlert = () => {
+    Swal.fire({
+      title: "Error",
+      text: "Check your fileds and try again.",
+      icon: "warning",
+      showCancelButton: false,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+    });
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert();
+    } else {
+      invalidAlert();
+    }
+  };
+
   return (
-    <div className="isolate bg-white py-5 px-6 sm:py-4 lg:px-8">
-      <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
-        <svg
-          className="relative left-1/2 -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-40rem)] sm:h-[42.375rem]"
-          viewBox="0 0 1155 678"
-        >
-          <path
-            fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-            fillOpacity=".3"
-            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-          />
-          <defs>
-            <linearGradient
-              id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533"
-              x1="1155.49"
-              x2="-78.208"
-              y1=".177"
-              y2="474.645"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#9089FC" />
-              <stop offset={1} stopColor="#FF80B5" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+    <div className="animate__animated animate__fadeInTopRight isolate bg-gray-100 py-5 px-6 sm:py-4 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Talk to us
@@ -45,7 +70,7 @@ export default function Contactus() {
           Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-6 max-w-xl sm:mt-5">
+      <form onSubmit={onSubmit} className="mx-auto mt-6 max-w-xl sm:mt-5">
         <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
           <div>
             <label
@@ -60,6 +85,8 @@ export default function Contactus() {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
+                value={firstname}
+                onChange={(e) => setFirstname(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -77,6 +104,8 @@ export default function Contactus() {
                 name="last-name"
                 id="last-name"
                 autoComplete="family-name"
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -94,6 +123,8 @@ export default function Contactus() {
                 name="company"
                 id="company"
                 autoComplete="organization"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -111,6 +142,8 @@ export default function Contactus() {
                 name="email"
                 id="email"
                 autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -135,6 +168,7 @@ export default function Contactus() {
                   <option>US</option>
                   <option>CA</option>
                   <option>EU</option>
+                  <option>KE</option>
                 </select>
                 <ChevronDownIcon
                   className="pointer-events-none absolute top-0 right-3 h-full w-5 text-gray-400"
@@ -146,6 +180,8 @@ export default function Contactus() {
                 name="phone-number"
                 id="phone-number"
                 autoComplete="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -162,6 +198,8 @@ export default function Contactus() {
                 name="message"
                 id="message"
                 rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 defaultValue={""}
               />
@@ -189,7 +227,7 @@ export default function Contactus() {
             </div>
             <Switch.Label className="text-sm leading-6 text-gray-600">
               By selecting this, you agree to our{" "}
-              <Link to="#" className="font-semibold text-indigo-600">
+              <Link to="/legalterms" className="font-semibold text-indigo-600">
                 privacy&nbsp;policy
               </Link>
               .
@@ -199,7 +237,7 @@ export default function Contactus() {
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block w-full isolate rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Let's talk
           </button>

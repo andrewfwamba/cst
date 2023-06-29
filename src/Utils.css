@@ -5,17 +5,17 @@
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px #1d2346ee;
   background: #f1f1f1;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #000000af;
+  background: #1d2346;
   border-radius: 5px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #1d2346a0;
 }
 
 .mt-2 {
@@ -92,6 +92,5 @@
 }
 .info {
   background-color: #fe9e0d;
-  width: 100%;
   height: 200px;
 }

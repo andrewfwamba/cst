@@ -16,7 +16,7 @@ function Loader(loading) {
       /> */}
 
       <FadeLoader
-        color={"#FE9E0D"}
+        color={"#1D2346"}
         loading={loading}
         cssOverride={override}
         size={50}

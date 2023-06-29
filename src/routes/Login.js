@@ -51,7 +51,7 @@ function Login() {
           localStorage.setItem("user", JSON.stringify(res.data));
           setLoading(false);
           console.log("successful login");
-          navigate("/home");
+          navigate("/");
         }
       } catch (error) {
         setLoading(false);
