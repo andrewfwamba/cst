@@ -1,5 +1,6 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
+import { scroll } from "framer-motion/dom";
 import {
   createHashRouter,
   createRoutesFromElements,
@@ -17,12 +18,19 @@ import Stats from "./routes/Stats";
 import Support from "./routes/Support";
 import About from "./routes/About";
 import Policy from "./routes/Policy";
+const progressWheel = document.querySelector(".progress");
+
+scroll((progress) => {
+  progressWheel.style.strokeDasharray = `${progress}, 1`;
+});
 
 const AppLayout = () => (
-  <>
+  <div className="fadein">
     <Sidebar />
-    <Outlet />
-  </>
+    <div>
+      <Outlet />
+    </div>
+  </div>
 );
 
 const router = createHashRouter(
