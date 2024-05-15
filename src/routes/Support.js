@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Accordion from "../components/Accordion";
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 import Contactus from "../components/Contactus";
-import Footer from "../components/Footer";
 import Swal from "sweetalert2";
 import Location from "../components/Location";
 
@@ -217,7 +216,6 @@ function Support() {
       </div>
       <Accordion />
       <Contactus />
-      <Footer />
     </>
   );
 }
