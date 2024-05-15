@@ -29,8 +29,12 @@ const Footer = () => {
             customized web design,web development,customized software
             development, SEO and solutions services */}
           </p>
+          {/* Social section */}
           <div className="flex justify-between mx-auto md:w-[75%] my-6">
-            <FaFacebookSquare size={30} />
+            <a href="http://" target="_blank" rel="noopenner norefferer">
+              <FaFacebookSquare size={30} />
+            </a>
+
             <FaInstagram size={30} />
             <FaTwitterSquare size={30} />
             <FaGithubSquare size={30} />
@@ -82,8 +86,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full py-4 mb-10 px-10 text-gray-600 text-xs md:text-base bg-slate-300 text-center">
-        {" "}
+      <div className="w-full py-4 mb-10 px-10 text-gray-600 text-[11px] md:text-base bg-slate-300 text-center">
         <p>
           Copyright &copy;{new Date().getFullYear()} Crewsoft Technologies. All
           rights reserved

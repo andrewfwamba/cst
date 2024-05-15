@@ -18,6 +18,8 @@ import Stats from "./routes/Stats";
 import Support from "./routes/Support";
 import About from "./routes/About";
 import Policy from "./routes/Policy";
+import Footer from "./components/Footer";
+import SmoothScroll from "./utilities/scroll";
 const progressWheel = document.querySelector(".progress");
 
 scroll((progress) => {
@@ -26,26 +28,30 @@ scroll((progress) => {
 
 const AppLayout = () => (
   <div className="fadein">
-    <Sidebar />
-    <div>
-      <Outlet />
-    </div>
+    <SmoothScroll>
+      <Sidebar />
+      <div>
+        <Outlet />
+      </div>
+      <Footer />
+    </SmoothScroll>
   </div>
 );
 
 const router = createHashRouter(
   createRoutesFromElements(
     <>
-      <Route element={<AppLayout />} errorElement={<ErrorPage />}>
-        <Route errorElement={<ErrorPage />}>
+      <Route errorElement={<ErrorPage />}>
+        <Route element={<AppLayout />} errorElement={<ErrorPage />}>
           <Route index element={<Home />} />
           <Route exact path="/statistics" element={<Stats />} />
           <Route exact path="/products" element={<Products />} />
           <Route exact path="/support" element={<Support />} />
           <Route exact path="/about" element={<About />} />
-          <Route exact path="/legalterms" element={<Policy />} />
+
           <Route />
         </Route>
+        <Route exact path="/legalterms" element={<Policy />} />
       </Route>
     </>
   )

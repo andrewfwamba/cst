@@ -57,7 +57,6 @@ function Stats() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

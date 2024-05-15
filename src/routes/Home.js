@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
-import Footer from "../components/Footer";
 import Cards from "../components/Cards";
 import Choice from "../components/Choice";
 
@@ -70,8 +69,6 @@ function Home() {
           {/* <Pricing /> */}
           <Choice />
         </div>
-
-        <Footer />
       </>
     );
 }
