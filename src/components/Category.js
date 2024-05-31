@@ -1,3 +1,5 @@
+import Projectslides from "../utilities/Projectslides";
+
 const callouts = [
   {
     name: "Enterprise management",
@@ -65,6 +67,7 @@ export default function Category() {
           </div>
         </div>
       </div>
+      <Projectslides projectImages={[]} type={""} />
     </div>
   );
 }
