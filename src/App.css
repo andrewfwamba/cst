@@ -188,8 +188,7 @@ span {
   line-height: 1.5;
 }
 .landing-2 {
-  background: url("../src/utilities/images/designcomp.jpg")
-    no-repeat;
+  background: url("../src/utilities/images/designcomp.jpg") no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -346,4 +345,11 @@ button {
     height: 300px;
     border-radius: 3px;
   }
+}
+
+.desktopimages {
+  width: 100%;
+}
+.mobileimages {
+  width: 100%;
 }
